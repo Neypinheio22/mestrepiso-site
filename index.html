@@ -1,0 +1,343 @@
+﻿<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Mestre Piso — Paginação profissional de pisos</title>
+  <meta name="description" content="Mestre Piso: cálculo automático, simulação de paginação e exportação em PDF para obras. Versão gratuita e Pro." />
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand"
+         href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+         target="_blank" rel="noopener noreferrer">
+        <img src="assets/logo-mestre-piso.png" alt="Logo Mestre Piso" />
+        <span>Mestre Piso</span>
+      </a>
+
+      <nav class="menu" aria-label="Menu">
+        <a href="#funcionalidades">Funcionalidades</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#planos">Planos</a>
+        <a href="javascript:void(0)" onclick="openSupportModal()">Suporte</a>
+      </nav>
+
+      <a class="btn btn-primary"
+         href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+         target="_blank" rel="noopener noreferrer">
+        Baixar na Play Store
+      </a>
+    </div>
+  </div>
+</header>
+
+<main id="topo">
+  <!-- HERO -->
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <h1 class="h1">Planejamento de paginação de piso, do jeito profissional.</h1>
+          <p class="sub">Calcule cortes, visualize o assentamento e gere relatório em PDF antes de iniciar a obra.</p>
+
+          <ul class="bullets">
+            <li><span class="check">✓</span><span>Menos desperdício e retrabalho</span></li>
+            <li><span class="check">✓</span><span>Visualização clara da paginação</span></li>
+            <li><span class="check">✓</span><span>Relatório em PDF para cliente e equipe</span></li>
+          </ul>
+
+          <div style="display:flex;gap:12px;flex-wrap:wrap">
+            <a class="btn btn-primary"
+               href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+               target="_blank" rel="noopener noreferrer">
+              Baixar na Play Store
+            </a>
+            <a class="btn btn-outline" href="#funcionalidades">Ver funcionalidades</a>
+          </div>
+
+          <div class="badges">
+            <span class="badge">Android</span>
+            <span class="badge">Free / Pro</span>
+            <span class="badge">Exportação em PDF</span>
+          </div>
+        </div>
+
+        <div class="hero-card" aria-label="Aplicativo em uso">
+          <img src="assets/hero-phone-hand.png" alt="Mestre Piso em um celular, em contexto de obra" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- COMO FUNCIONA -->
+  <section id="como-funciona" class="section alt">
+    <div class="container">
+      <h2 class="section-title">Como funciona</h2>
+      <p class="section-sub">Simples, rápido e técnico — em poucos passos você já tem sua paginação pronta.</p>
+
+      <div class="how-grid">
+        <div class="steps">
+          <div class="step">
+            <div class="num">1</div>
+            <div>
+              <h4>Insira as medidas do ambiente e do piso</h4>
+              <p>Informe dimensões do ambiente, peça e junta. O app organiza os cálculos automaticamente.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="num">2</div>
+            <div>
+              <h4>Visualize a paginação em tempo real</h4>
+              <p>Veja o alinhamento e a distribuição das peças antes de iniciar a execução.</p>
+            </div>
+          </div>
+
+          <div class="step">
+            <div class="num">3</div>
+            <div>
+              <h4>Exporte o relatório em PDF</h4>
+              <p>Gere um documento para obra e cliente, facilitando conferência e comunicação.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="img-card">
+          <img src="assets/how-it-works.png" alt="Telas do app Mestre Piso mostrando entrada de medidas e resumo" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FUNCIONALIDADES -->
+  <section id="funcionalidades" class="section">
+    <div class="container">
+      <h2 class="section-title">Funcionalidades</h2>
+      <p class="section-sub">Recursos essenciais para planejamento de assentamento com padrão profissional.</p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon">🧮</div>
+          <h3>Cálculo automático</h3>
+          <p>Quantitativos e distribuição das peças em poucos segundos.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📐</div>
+          <h3>Paginação em tempo real</h3>
+          <p>Visualize o padrão do assentamento com clareza antes de executar.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">✂️</div>
+          <h3>Cortes identificados</h3>
+          <p>Antecipe recortes e alinhamentos com mais segurança na obra.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">PDF</div>
+          <h3>Exportação em PDF</h3>
+          <p>Relatório para cliente e equipe, facilitando aprovação e conferência.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BENEFÍCIOS -->
+  <section class="section alt">
+    <div class="container">
+      <div class="benefit-grid">
+        <div>
+          <h2 class="section-title">Benefícios na prática</h2>
+          <p class="section-sub">Mais previsibilidade, menos retrabalho e melhor apresentação ao cliente.</p>
+
+          <ul class="list">
+            <li><span class="check">✓</span><span>Mais precisão na compra de material</span></li>
+            <li><span class="check">✓</span><span>Padronização do processo de assentamento</span></li>
+            <li><span class="check">✓</span><span>Ajuda a vender e explicar a paginação para o cliente</span></li>
+            <li><span class="check">✓</span><span>Agiliza orçamento e execução</span></li>
+          </ul>
+
+          <div class="kpi">
+            <div class="k"><strong>Rápido</strong><span>Planejamento em minutos</span></div>
+            <div class="k"><strong>Claro</strong><span>Visualização objetiva</span></div>
+            <div class="k"><strong>Profissional</strong><span>Relatório em PDF</span></div>
+          </div>
+        </div>
+
+        <div class="img-card" aria-label="Imagem ilustrativa">
+          <img src="assets/hero-phone-hand.png" alt="Aplicativo em contexto de obra" />
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PLANOS -->
+  <section id="planos" class="section">
+    <div class="container">
+      <h2 class="section-title">Gratuito para todos. Completo para profissionais.</h2>
+      <p class="section-sub">
+        A versão gratuita possui anúncios para manter os custos do aplicativo e permitir acesso amplo.
+        Para quem precisa do máximo de recursos e uma experiência sem anúncios, o Mestre Piso Pro libera todas as funções avançadas.
+      </p>
+
+      <div class="plans">
+        <div class="plan">
+          <span class="tag">FREE • Gratuito</span>
+          <h3>Versão Free</h3>
+          <p>Ideal para começar e planejar com as funções essenciais.</p>
+          <ul>
+            <li>Funções essenciais de cálculo e paginação</li>
+            <li>Simulação visual padrão</li>
+            <li>Exportação de PDF (padrão)</li>
+            <li><strong>Com anúncios</strong> (mantém o app acessível)</li>
+          </ul>
+          <div class="cta">
+            <a class="btn btn-primary"
+               href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+               target="_blank" rel="noopener noreferrer">
+              Baixar agora
+            </a>
+            <a class="btn btn-outline" href="javascript:void(0)" onclick="openSupportModal()">Tirar dúvidas</a>
+          </div>
+        </div>
+
+        <div class="plan pro">
+          <span class="tag">PRO • Recomendado</span>
+          <h3>Mestre Piso Pro</h3>
+          <p>Para uso profissional: mais recursos, mais controle e sem anúncios.</p>
+          <ul>
+            <li><strong>Liberação de todas as funções</strong></li>
+            <li><strong>Paginação em diagonais</strong></li>
+            <li><strong>Exportação completa do PDF</strong></li>
+            <li><strong>Sem anúncios</strong></li>
+          </ul>
+          <div class="cta">
+            <a class="btn btn-primary"
+               href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+               target="_blank" rel="noopener noreferrer">
+              Assinar Pro
+            </a>
+            <a class="btn btn-outline" href="#como-funciona">Ver como funciona</a>
+          </div>
+          <p style="margin-top:12px;color:var(--muted);font-size:12px;">
+            Assinatura opcional. Valores e disponibilidade podem variar conforme a Google Play.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA FINAL -->
+  <section id="download" class="section">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h3>Pronto para planejar sua próxima obra com precisão?</h3>
+          <p>Baixe o Mestre Piso e faça sua primeira paginação em poucos minutos.</p>
+        </div>
+        <a class="btn btn-primary"
+           href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+           target="_blank" rel="noopener noreferrer">
+          Baixar na Play Store
+        </a>
+      </div>
+      <p style="margin:12px 0 0 0;color:var(--muted);font-size:12px;">
+        Dica: quando você tiver o link da Play Store, substitua o href do botão acima e do header.
+      </p>
+    </div>
+  </section>
+
+  <!-- SUPORTE / FOOTER -->
+  <footer id="suporte" class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <strong style="color:#0F2A44;">Pinheiro Logexpress Ltda</strong><br>
+          CNPJ: 46.117.979/0001-83<br>
+          Responsável: José Huguisney Pinheiro Alves
+        </div>
+
+        <div>
+          <div><a href="politica-de-privacidade.html">Política de Privacidade</a></div>
+          <div><a href="javascript:void(0)" onclick="openSupportModal()">Suporte</a></div>
+          <div><a target="_blank" rel="noopener noreferrer"
+                  href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso">
+            Avaliar na Play Store
+          </a></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</main>
+
+<!-- MODAL SUPORTE -->
+<div id="supportModal" class="modal-overlay" aria-hidden="true">
+  <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="supportTitle">
+    <div class="modal-header">
+      <h2 id="supportTitle">Tira dúvidas & Suporte</h2>
+      <button class="modal-close" type="button" aria-label="Fechar" onclick="closeSupportModal()">✕</button>
+    </div>
+
+    <p class="modal-subtitle">
+      Envie sua dúvida, relato de erro ou sugestão. A gente responde no seu e-mail.
+    </p>
+
+    <form id="supportForm" class="support-form">
+      <div class="form-row">
+        <div class="form-field">
+          <label for="supportName">Nome</label>
+          <input id="supportName" name="name" type="text" placeholder="Seu nome (opcional)">
+        </div>
+
+        <div class="form-field">
+          <label for="supportEmail">E-mail *</label>
+          <input id="supportEmail" name="email" type="email" placeholder="seuemail@exemplo.com" required>
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-field">
+          <label for="supportType">Assunto</label>
+          <select id="supportType" name="type">
+            <option value="Dúvida">Dúvida</option>
+            <option value="Erro/Bug">Erro / Bug</option>
+            <option value="Assinatura Pro">Assinatura Pro</option>
+            <option value="Sugestão">Sugestão</option>
+          </select>
+        </div>
+
+        <div class="form-field">
+          <label for="supportPhone">WhatsApp (opcional)</label>
+          <input id="supportPhone" name="phone" type="text" placeholder="(85) 9xxxx-xxxx">
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label for="supportMessage">Descrição / Relato *</label>
+        <textarea id="supportMessage" name="message" rows="6" placeholder="Explique o que aconteceu, qual cálculo estava fazendo..." required></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button type="button" class="btn-secondary" onclick="closeSupportModal()">Cancelar</button>
+        <button type="submit" class="btn-primary">Enviar</button>
+      </div>
+
+      <p class="modal-note">
+        * Ao enviar, seu app de e-mail abrirá com a mensagem pronta.
+      </p>
+    </form>
+  </div>
+</div>
+
+<script src="./script.js"></script>
+</body>
+</html>
