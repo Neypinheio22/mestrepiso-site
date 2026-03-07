@@ -1,0 +1,835 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Calculadora de Piso Online | Baixe o app Mestre Piso</title>
+  <meta name="description" content="Use a calculadora de piso online do Mestre Piso para estimar piso, caixas e paginação. Veja o resultado e baixe o app para liberar o cálculo completo." />
+  <meta name="keywords" content="calculadora de piso, calcular piso, quantidade de piso, quantas caixas de piso comprar, paginação de piso, app Mestre Piso" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.mestrepiso.com.br/calculadora-de-piso.html" />
+
+  <meta property="og:locale" content="pt_BR" />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Calculadora de Piso Online | Mestre Piso" />
+  <meta property="og:description" content="Faça uma simulação rápida e baixe o app Mestre Piso para liberar o cálculo completo." />
+  <meta property="og:url" content="https://www.mestrepiso.com.br/calculadora-de-piso.html" />
+  <meta property="og:site_name" content="Mestre Piso" />
+  <meta property="og:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Calculadora de Piso Online | Mestre Piso" />
+  <meta name="twitter:description" content="Faça uma simulação rápida e baixe o app Mestre Piso para liberar o cálculo completo." />
+  <meta name="twitter:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg" />
+
+  <link rel="icon" href="assets/favicon.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+
+  <style>
+    :root{
+      --bg:#f7f9fc;
+      --card:#ffffff;
+      --text:#102b46;
+      --muted:#58677a;
+      --line:#dfe7f0;
+      --blue:#2f6df6;
+      --blue-dark:#1e57d8;
+      --green:#2db45d;
+      --shadow:0 18px 45px rgba(16,43,70,.10);
+      --radius:22px;
+      --radius-sm:14px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:"Inter",sans-serif;
+      background:linear-gradient(180deg,#f8fbff 0%,#f5f7fb 100%);
+      color:var(--text);
+    }
+
+    a{text-decoration:none;color:inherit}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(var(--max),calc(100% - 32px));
+      margin:0 auto;
+    }
+
+    .header{
+      position:sticky;
+      top:0;
+      z-index:50;
+      background:rgba(255,255,255,.92);
+      backdrop-filter:blur(10px);
+      border-bottom:1px solid rgba(16,43,70,.08);
+    }
+
+    .nav{
+      min-height:82px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:800;
+      font-size:1.45rem;
+    }
+
+    .brand img{
+      width:44px;
+      height:44px;
+      object-fit:contain;
+      border-radius:10px;
+    }
+
+    .menu{
+      display:flex;
+      align-items:center;
+      gap:26px;
+      color:var(--muted);
+      font-weight:600;
+    }
+
+    .menu a:hover{color:var(--text)}
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      border:none;
+      border-radius:16px;
+      padding:15px 24px;
+      font-weight:800;
+      font-size:1rem;
+      cursor:pointer;
+      transition:.2s ease;
+    }
+
+    .btn-primary{
+      color:#fff;
+      background:linear-gradient(135deg,var(--blue),var(--blue-dark));
+      box-shadow:0 12px 25px rgba(47,109,246,.22);
+    }
+
+    .btn-primary:hover{transform:translateY(-1px)}
+    .btn-outline{
+      color:var(--text);
+      background:#fff;
+      border:1px solid var(--line);
+    }
+
+    .hero{
+      padding:56px 0 34px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.02fr .98fr;
+      gap:34px;
+      align-items:center;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 14px;
+      border-radius:999px;
+      background:#eaf1ff;
+      color:var(--blue-dark);
+      font-weight:700;
+      font-size:.92rem;
+      margin-bottom:18px;
+    }
+
+    h1{
+      margin:0 0 18px;
+      font-size:clamp(2.5rem,5vw,4.5rem);
+      line-height:.98;
+      letter-spacing:-.03em;
+    }
+
+    .sub{
+      margin:0 0 22px;
+      font-size:1.3rem;
+      line-height:1.55;
+      color:var(--muted);
+      max-width:760px;
+    }
+
+    .bullets{
+      list-style:none;
+      padding:0;
+      margin:0 0 26px;
+      display:grid;
+      gap:14px;
+    }
+
+    .bullets li{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      color:#334256;
+      font-size:1.1rem;
+      font-weight:500;
+    }
+
+    .check{
+      width:30px;
+      height:30px;
+      border-radius:10px;
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      background:#edf3ff;
+      color:var(--blue);
+      font-weight:900;
+      flex:0 0 auto;
+    }
+
+    .actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+      margin-bottom:18px;
+    }
+
+    .micro{
+      color:var(--muted);
+      font-size:.95rem;
+      font-weight:600;
+    }
+
+    .mock-wrap{
+      display:flex;
+      justify-content:center;
+    }
+
+    .phone{
+      width:min(420px,100%);
+      background:#101419;
+      border-radius:42px;
+      padding:14px;
+      box-shadow:0 30px 60px rgba(16,43,70,.20);
+      position:relative;
+    }
+
+    .phone::before{
+      content:"";
+      position:absolute;
+      top:9px;
+      left:50%;
+      transform:translateX(-50%);
+      width:120px;
+      height:22px;
+      background:#0d1115;
+      border-radius:0 0 18px 18px;
+      z-index:2;
+    }
+
+    .screen{
+      border-radius:30px;
+      overflow:hidden;
+      background:linear-gradient(180deg,#f8fbff 0%,#f2f6fb 100%);
+      min-height:760px;
+      border:1px solid rgba(255,255,255,.2);
+      position:relative;
+    }
+
+    .screen-top{
+      padding:28px 24px 14px;
+      text-align:center;
+      background:linear-gradient(180deg,#ffffff 0%,#f7fbff 100%);
+      border-bottom:1px solid #e7eef7;
+    }
+
+    .screen-logo{
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      margin-bottom:12px;
+    }
+
+    .screen-logo img{
+      width:38px;
+      height:38px;
+      object-fit:contain;
+    }
+
+    .screen-logo span{
+      font-weight:800;
+      font-size:1.7rem;
+      color:var(--text);
+    }
+
+    .screen-sub{
+      margin:0;
+      color:var(--muted);
+      font-size:.96rem;
+    }
+
+    .calc-box{
+      padding:20px;
+      display:grid;
+      gap:14px;
+    }
+
+    .field{
+      background:#fff;
+      border:1px solid var(--line);
+      border-radius:16px;
+      padding:14px 14px 12px;
+      box-shadow:0 6px 16px rgba(16,43,70,.04);
+    }
+
+    .field label{
+      display:block;
+      font-size:.88rem;
+      font-weight:700;
+      color:#516173;
+      margin-bottom:8px;
+    }
+
+    .fake-input{
+      width:100%;
+      height:48px;
+      border-radius:12px;
+      background:#f7faff;
+      border:1px solid #dde7f2;
+      padding:0 14px;
+      font-size:1rem;
+      color:var(--text);
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      font-weight:700;
+    }
+
+    .result-card{
+      margin:6px 20px 22px;
+      background:linear-gradient(180deg,#ffffff 0%,#f9fbff 100%);
+      border:1px solid #dbe5f1;
+      border-radius:22px;
+      overflow:hidden;
+      box-shadow:0 16px 34px rgba(16,43,70,.08);
+    }
+
+    .result-head{
+      padding:18px 18px 10px;
+      border-bottom:1px solid #e7eef7;
+    }
+
+    .result-head h2{
+      margin:0 0 6px;
+      font-size:1.08rem;
+    }
+
+    .result-head p{
+      margin:0;
+      color:var(--muted);
+      font-size:.9rem;
+    }
+
+    .result-grid{
+      padding:16px 18px 10px;
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:12px;
+    }
+
+    .mini{
+      background:#f6f9ff;
+      border:1px solid #e0e9f3;
+      border-radius:16px;
+      padding:14px;
+    }
+
+    .mini span{
+      display:block;
+      font-size:.8rem;
+      color:var(--muted);
+      margin-bottom:6px;
+      font-weight:700;
+    }
+
+    .mini strong{
+      font-size:1.2rem;
+      color:var(--text);
+    }
+
+    .lock-area{
+      position:relative;
+      padding:18px;
+    }
+
+    .blur-box{
+      position:relative;
+      border-radius:18px;
+      overflow:hidden;
+      border:1px solid #dce7f3;
+      background:#fff;
+    }
+
+    .blur-content{
+      padding:18px;
+      filter:blur(4px);
+      user-select:none;
+      pointer-events:none;
+      opacity:.9;
+    }
+
+    .blur-line{
+      height:14px;
+      border-radius:999px;
+      background:linear-gradient(90deg,#e5ecf6,#f1f5fb,#e5ecf6);
+      margin-bottom:12px;
+    }
+
+    .blur-line.sm{width:48%}
+    .blur-line.md{width:72%}
+    .blur-line.lg{width:92%}
+
+    .lock-overlay{
+      position:absolute;
+      inset:0;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      padding:18px;
+      background:linear-gradient(180deg,rgba(255,255,255,.38),rgba(255,255,255,.90));
+    }
+
+    .lock-card{
+      width:100%;
+      max-width:290px;
+      background:rgba(255,255,255,.98);
+      border:1px solid #dce6f2;
+      box-shadow:0 20px 40px rgba(16,43,70,.12);
+      border-radius:22px;
+      padding:20px;
+      text-align:center;
+    }
+
+    .lock-icon{
+      width:54px;
+      height:54px;
+      border-radius:16px;
+      margin:0 auto 12px;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      background:#edf3ff;
+      color:var(--blue);
+      font-size:1.5rem;
+    }
+
+    .lock-card h3{
+      margin:0 0 8px;
+      font-size:1.15rem;
+    }
+
+    .lock-card p{
+      margin:0 0 16px;
+      color:var(--muted);
+      font-size:.96rem;
+      line-height:1.5;
+    }
+
+    .section{
+      padding:34px 0 72px;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:clamp(1.8rem,3vw,2.6rem);
+      margin:0 0 12px;
+    }
+
+    .section-sub{
+      max-width:860px;
+      margin:0 auto 34px;
+      text-align:center;
+      color:var(--muted);
+      font-size:1.08rem;
+      line-height:1.7;
+    }
+
+    .cards{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:18px;
+    }
+
+    .card{
+      background:var(--card);
+      border:1px solid #e3ebf5;
+      border-radius:22px;
+      padding:24px;
+      box-shadow:var(--shadow);
+    }
+
+    .card .icon{
+      width:56px;
+      height:56px;
+      border-radius:16px;
+      background:#edf3ff;
+      color:var(--blue);
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      font-size:1.5rem;
+      margin-bottom:14px;
+    }
+
+    .card h3{
+      margin:0 0 8px;
+      font-size:1.18rem;
+    }
+
+    .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .cta-band{
+      background:linear-gradient(135deg,#0f2a44 0%,#1d4c7e 100%);
+      color:#fff;
+      border-radius:28px;
+      padding:34px;
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:24px;
+      box-shadow:0 24px 50px rgba(15,42,68,.18);
+    }
+
+    .cta-band h2{
+      margin:0 0 10px;
+      font-size:clamp(1.7rem,2.5vw,2.5rem);
+    }
+
+    .cta-band p{
+      margin:0;
+      opacity:.92;
+      line-height:1.7;
+      max-width:720px;
+    }
+
+    .footer{
+      padding:18px 0 38px;
+      color:var(--muted);
+      font-size:.95rem;
+      text-align:center;
+    }
+
+    @media (max-width: 1080px){
+      .menu{display:none}
+      .hero-grid{grid-template-columns:1fr}
+      .mock-wrap{order:-1}
+      .cards{grid-template-columns:repeat(2,1fr)}
+      .cta-band{flex-direction:column;align-items:flex-start}
+    }
+
+    @media (max-width: 640px){
+      .container{width:min(100% - 20px, var(--max))}
+      .hero{padding-top:28px}
+      .nav{min-height:74px}
+      .brand span{font-size:1.15rem}
+      h1{font-size:2.35rem}
+      .sub{font-size:1.08rem}
+      .btn{width:100%}
+      .actions{flex-direction:column}
+      .phone{padding:11px;border-radius:32px}
+      .screen{min-height:auto}
+      .cards{grid-template-columns:1fr}
+      .result-grid{grid-template-columns:1fr}
+      .cta-band{padding:24px}
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "SoftwareApplication",
+    "name": "Mestre Piso",
+    "applicationCategory": "BusinessApplication",
+    "operatingSystem": "Android",
+    "description": "Aplicativo para calcular piso, quantidade de caixas, cortes e paginação profissional de ambientes.",
+    "url": "https://www.mestrepiso.com.br/calculadora-de-piso.html",
+    "downloadUrl": "https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Pinheiro Logexpress Ltda"
+    }
+  }
+  </script>
+</head>
+<body>
+
+<header class="header">
+  <div class="container">
+    <div class="nav">
+      <a class="brand" href="https://www.mestrepiso.com.br/">
+        <img src="assets/logo-mestre-piso.png" alt="Logo Mestre Piso" />
+        <span>Mestre Piso</span>
+      </a>
+
+      <nav class="menu" aria-label="Menu principal">
+        <a href="#beneficios">Benefícios</a>
+        <a href="#como-funciona">Como funciona</a>
+        <a href="#download">Baixar app</a>
+      </nav>
+
+      <a class="btn btn-primary"
+         href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+         target="_blank" rel="noopener noreferrer">
+        Baixar na Play Store
+      </a>
+    </div>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="container">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">Calculadora de piso online</span>
+          <h1>Veja a estimativa inicial e libere o cálculo completo no app Mestre Piso.</h1>
+          <p class="sub">
+            Simule medidas, visualize uma prévia do resultado e baixe o app para desbloquear a quantidade completa de piso, caixas, cortes e paginação profissional.
+          </p>
+
+          <ul class="bullets">
+            <li><span class="check">✓</span><span>Estimativa rápida para piso e porcelanato</span></li>
+            <li><span class="check">✓</span><span>Prévia da quantidade de caixas e paginação</span></li>
+            <li><span class="check">✓</span><span>Resultado completo liberado no aplicativo</span></li>
+          </ul>
+
+          <div class="actions">
+            <a class="btn btn-primary"
+               href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+               target="_blank" rel="noopener noreferrer">
+              Baixar o app agora
+            </a>
+
+            <a class="btn btn-outline" href="#como-funciona">
+              Ver como funciona
+            </a>
+          </div>
+
+          <div class="micro">Disponível gratuitamente na Google Play.</div>
+        </div>
+
+        <div class="mock-wrap">
+          <div class="phone" aria-label="Simulação da calculadora dentro do celular">
+            <div class="screen">
+              <div class="screen-top">
+                <div class="screen-logo">
+                  <img src="assets/logo-mestre-piso.png" alt="Logo Mestre Piso" />
+                  <span>Mestre Piso</span>
+                </div>
+                <p class="screen-sub">Prévia da calculadora de piso</p>
+              </div>
+
+              <div class="calc-box">
+                <div class="field">
+                  <label>Ambiente</label>
+                  <div class="fake-input"><span>Sala / Cozinha</span><span>✓</span></div>
+                </div>
+
+                <div class="field">
+                  <label>Largura do ambiente</label>
+                  <div class="fake-input"><span>3,20 m</span><span>📏</span></div>
+                </div>
+
+                <div class="field">
+                  <label>Comprimento do ambiente</label>
+                  <div class="fake-input"><span>4,80 m</span><span>📏</span></div>
+                </div>
+
+                <div class="field">
+                  <label>Tamanho do piso pesquisado</label>
+                  <div class="fake-input"><span>84 x 84 cm</span><span>⬜</span></div>
+                </div>
+
+                <div class="field">
+                  <label>Junta</label>
+                  <div class="fake-input"><span>2 mm</span><span>⚙️</span></div>
+                </div>
+              </div>
+
+              <div class="result-card">
+                <div class="result-head">
+                  <h2>Resultado inicial da sua busca</h2>
+                  <p>Prévia liberada para mostrar o potencial do cálculo.</p>
+                </div>
+
+                <div class="result-grid">
+                  <div class="mini">
+                    <span>Área estimada</span>
+                    <strong>15,36 m²</strong>
+                  </div>
+                  <div class="mini">
+                    <span>Perda inicial</span>
+                    <strong>+ 8%</strong>
+                  </div>
+                  <div class="mini">
+                    <span>Quantidade parcial</span>
+                    <strong>17 peças</strong>
+                  </div>
+                  <div class="mini">
+                    <span>Status</span>
+                    <strong style="color:#2db45d">Prévia pronta</strong>
+                  </div>
+                </div>
+
+                <div class="lock-area">
+                  <div class="blur-box">
+                    <div class="blur-content">
+                      <div class="blur-line lg"></div>
+                      <div class="blur-line md"></div>
+                      <div class="blur-line lg"></div>
+                      <div class="blur-line sm"></div>
+                      <div class="blur-line md"></div>
+                      <div class="blur-line lg"></div>
+                    </div>
+
+                    <div class="lock-overlay">
+                      <div class="lock-card">
+                        <div class="lock-icon">🔒</div>
+                        <h3>Resultado completo bloqueado</h3>
+                        <p>
+                          Baixe o app Mestre Piso para ver quantidade final de caixas, cortes, paginação e relatório em PDF.
+                        </p>
+                        <a class="btn btn-primary"
+                           href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+                           target="_blank" rel="noopener noreferrer">
+                          Baixar na Play Store
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="beneficios" class="section">
+    <div class="container">
+      <h2 class="section-title">Por que usar o Mestre Piso</h2>
+      <p class="section-sub">
+        Em vez de fazer conta manual e correr risco de erro na compra, você faz uma simulação rápida e leva o cálculo completo no app.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon">🧮</div>
+          <h3>Calcule piso com mais rapidez</h3>
+          <p>Tenha uma prévia imediata e depois libere no app o cálculo completo com muito mais precisão.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📦</div>
+          <h3>Veja a quantidade de caixas</h3>
+          <p>Descubra melhor a compra do material e reduza o risco de faltar ou sobrar piso na obra.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📐</div>
+          <h3>Visualize a paginação</h3>
+          <p>Tenha no celular uma visão mais profissional da distribuição das peças antes de executar.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">📄</div>
+          <h3>Gere relatório em PDF</h3>
+          <p>Apresente o planejamento de forma mais clara para cliente, equipe e execução em obra.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="como-funciona" class="section">
+    <div class="container">
+      <h2 class="section-title">Como funciona</h2>
+      <p class="section-sub">
+        A página mostra uma simulação rápida. O resultado completo fica liberado no app Mestre Piso.
+      </p>
+
+      <div class="cards">
+        <div class="card">
+          <div class="icon">1</div>
+          <h3>Você pesquisa a medida</h3>
+          <p>Informe ambiente, dimensões e o tamanho do piso que está procurando.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">2</div>
+          <h3>Você vê uma prévia</h3>
+          <p>Receba uma visão inicial da área, da perda estimada e da lógica do cálculo.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">3</div>
+          <h3>Desbloqueie no app</h3>
+          <p>Baixe o Mestre Piso para ver caixas, cortes, paginação e relatório final.</p>
+        </div>
+
+        <div class="card">
+          <div class="icon">4</div>
+          <h3>Planeje com mais segurança</h3>
+          <p>Use o aplicativo para obra, orçamento, apresentação para cliente e compra de material.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="download" class="section">
+    <div class="container">
+      <div class="cta-band">
+        <div>
+          <h2>Quer liberar o cálculo completo?</h2>
+          <p>
+            Baixe o app Mestre Piso e veja a quantidade final de piso, estimativa de caixas, cortes, paginação profissional e exportação em PDF.
+          </p>
+        </div>
+
+        <a class="btn btn-primary"
+           href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+           target="_blank" rel="noopener noreferrer">
+          Baixar na Play Store
+        </a>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="container">
+    Mestre Piso • Calculadora de piso online •
+    <a href="https://www.mestrepiso.com.br/">Página principal</a> •
+    <a href="politica-de-privacidade.html">Política de Privacidade</a>
+  </div>
+</footer>
+
+</body>
+</html>
