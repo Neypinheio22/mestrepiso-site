@@ -1,0 +1,1035 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Quanto de argamassa por m²? Calculadora e consumo por tipo de piso | Mestre Piso</title>
+  <meta
+    name="description"
+    content="Descubra quanto de argamassa usar por m² de piso. Veja consumo médio, fatores que alteram o rendimento e use o Mestre Piso para planejar paginação, material e argamassa com mais precisão."
+  />
+  <meta
+    name="keywords"
+    content="quanto de argamassa por m2, consumo de argamassa por m2, argamassa por metro quadrado, rendimento da argamassa, calculadora de argamassa, quantidade de argamassa para piso"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mestre Piso" />
+  <link rel="canonical" href="https://www.mestrepiso.com.br/quanto-de-argamassa-por-m2.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Quanto de argamassa por m²? Calculadora e consumo por tipo de piso" />
+  <meta
+    property="og:description"
+    content="Veja quanto de argamassa usar por m², entenda o rendimento e planeje melhor sua obra com o app profissional Mestre Piso."
+  />
+  <meta property="og:url" content="https://www.mestrepiso.com.br/quanto-de-argamassa-por-m2.html" />
+  <meta property="og:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Quanto de argamassa por m²? Calculadora e consumo por tipo de piso" />
+  <meta
+    name="twitter:description"
+    content="Descubra o consumo médio de argamassa por m² e planeje sua obra com mais precisão."
+  />
+  <meta name="twitter:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg" />
+
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg-soft:#0d1b2d;
+      --card:#10233d;
+      --card-2:#122844;
+      --text:#eef4ff;
+      --muted:#b8c7e0;
+      --line:rgba(255,255,255,.10);
+      --green:#27c07d;
+      --green-2:#1aa56a;
+      --blue:#4da3ff;
+      --gold:#ffd76a;
+      --shadow:0 18px 50px rgba(0,0,0,.28);
+      --radius:22px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(77,163,255,.14), transparent 30%),
+        radial-gradient(circle at top right, rgba(39,192,125,.10), transparent 26%),
+        linear-gradient(180deg, #06101d 0%, #091526 100%);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(calc(100% - 32px), var(--max));
+      margin:0 auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(14px);
+      background:rgba(6,16,29,.75);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      min-height:78px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      font-size:1.05rem;
+      flex-shrink:0;
+    }
+
+    .brand img{
+      height:36px;
+      width:auto;
+      max-width:none;
+      object-fit:contain;
+      display:block;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .nav-links a:hover{color:#fff}
+
+    .cta-top{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:14px;
+      background:linear-gradient(135deg, var(--green), var(--green-2));
+      color:#fff;
+      font-weight:700;
+      box-shadow:var(--shadow);
+      white-space:nowrap;
+    }
+
+    .hero{
+      padding:72px 0 34px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.2fr .8fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .hero-card,
+    .card{
+      background:linear-gradient(180deg, rgba(18,40,68,.95), rgba(13,27,45,.98));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card{
+      padding:34px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size:.88rem;
+      font-weight:700;
+      color:#cbe8ff;
+      background:rgba(77,163,255,.10);
+      border:1px solid rgba(77,163,255,.20);
+      border-radius:999px;
+      padding:10px 14px;
+      margin-bottom:16px;
+    }
+
+    h1{
+      font-size:clamp(2rem, 4vw, 3.5rem);
+      line-height:1.08;
+      margin:0 0 16px;
+      letter-spacing:-.03em;
+    }
+
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:1.06rem;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:28px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 20px;
+      border-radius:14px;
+      font-weight:700;
+      transition:.2s ease;
+      text-align:center;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, var(--green), var(--green-2));
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      background:rgba(255,255,255,.03);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover{
+      transform:translateY(-2px);
+    }
+
+    .hero-side{
+      padding:26px;
+    }
+
+    .stat-list{
+      display:grid;
+      gap:14px;
+    }
+
+    .stat{
+      padding:18px;
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .stat strong{
+      display:block;
+      font-size:1.05rem;
+      margin-bottom:6px;
+    }
+
+    .stat span{
+      color:var(--muted);
+      font-size:.96rem;
+    }
+
+    .section{
+      padding:28px 0;
+    }
+
+    .section-title{
+      margin:0 0 18px;
+      font-size:clamp(1.55rem, 2.5vw, 2.3rem);
+      line-height:1.15;
+      letter-spacing:-.02em;
+    }
+
+    .section-sub{
+      color:var(--muted);
+      margin:0 0 24px;
+      max-width:820px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
+    }
+
+    .card{
+      padding:26px;
+    }
+
+    .card h2,
+    .card h3{
+      margin-top:0;
+      line-height:1.2;
+    }
+
+    .card p{
+      color:var(--muted);
+    }
+
+    .highlight{
+      color:#fff;
+      font-weight:700;
+    }
+
+    .table-wrap{
+      overflow:auto;
+      border-radius:18px;
+      border:1px solid var(--line);
+      background:rgba(255,255,255,.03);
+    }
+
+    table{
+      width:100%;
+      border-collapse:collapse;
+      min-width:760px;
+    }
+
+    th, td{
+      padding:16px 18px;
+      text-align:left;
+      border-bottom:1px solid rgba(255,255,255,.08);
+      vertical-align:top;
+    }
+
+    th{
+      background:rgba(255,255,255,.05);
+      font-size:.96rem;
+    }
+
+    td{
+      color:var(--muted);
+      font-size:.97rem;
+    }
+
+    .note{
+      margin-top:14px;
+      color:#cfe2ff;
+      font-size:.95rem;
+    }
+
+    .steps{
+      display:grid;
+      gap:14px;
+      counter-reset:item;
+    }
+
+    .step{
+      position:relative;
+      padding:18px 18px 18px 70px;
+      border-radius:18px;
+      background:rgba(255,255,255,.04);
+      border:1px solid rgba(255,255,255,.08);
+    }
+
+    .step::before{
+      counter-increment:item;
+      content:counter(item);
+      position:absolute;
+      left:18px;
+      top:18px;
+      width:38px;
+      height:38px;
+      display:grid;
+      place-items:center;
+      border-radius:12px;
+      background:linear-gradient(135deg, var(--green), var(--blue));
+      color:#fff;
+      font-weight:800;
+    }
+
+    .faq{
+      display:grid;
+      gap:14px;
+    }
+
+    details{
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(18,40,68,.95), rgba(13,27,45,.98));
+      border:1px solid var(--line);
+      padding:18px 20px;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      list-style:none;
+    }
+
+    summary::-webkit-details-marker{display:none}
+    details p{
+      margin:14px 0 0;
+      color:var(--muted);
+    }
+
+    .cta-final{
+      padding:18px 0 80px;
+    }
+
+    .cta-box{
+      padding:34px;
+      text-align:center;
+      background:
+        radial-gradient(circle at top, rgba(77,163,255,.14), transparent 34%),
+        linear-gradient(180deg, rgba(18,40,68,.98), rgba(13,27,45,.98));
+      border:1px solid var(--line);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .cta-box p{
+      max-width:780px;
+      margin:0 auto 24px;
+      color:var(--muted);
+    }
+
+    .pro-grid{
+      display:grid;
+      grid-template-columns:1.15fr .85fr;
+      gap:22px;
+      margin-top:24px;
+      text-align:left;
+    }
+
+    .pro-feature-list{
+      display:grid;
+      gap:12px;
+      padding-left:18px;
+      color:var(--muted);
+      margin:18px 0 0;
+    }
+
+    .pro-feature-list li strong{
+      color:#fff;
+    }
+
+    .price-card{
+      position:relative;
+      overflow:hidden;
+    }
+
+    .price-badge{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,215,106,.14);
+      border:1px solid rgba(255,215,106,.35);
+      color:#ffe59e;
+      font-size:.85rem;
+      font-weight:800;
+      margin-bottom:14px;
+    }
+
+    .price-highlight{
+      border:1px solid rgba(39,192,125,.30);
+      background:
+        radial-gradient(circle at top right, rgba(39,192,125,.10), transparent 34%),
+        linear-gradient(180deg, rgba(18,40,68,.98), rgba(13,27,45,.98));
+      box-shadow:0 18px 50px rgba(0,0,0,.28), 0 0 0 1px rgba(39,192,125,.08) inset;
+    }
+
+    .price{
+      font-size:2.2rem;
+      font-weight:800;
+      color:#fff;
+      line-height:1;
+      margin:0 0 10px;
+    }
+
+    .price span{
+      font-size:1rem;
+      font-weight:600;
+      color:var(--muted);
+    }
+
+    .price-copy{
+      color:#cfe2ff !important;
+      font-weight:700;
+      margin-bottom:14px !important;
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:28px 0 42px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .footer-grid{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    .mini-list{
+      display:grid;
+      gap:12px;
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    .mini-list li strong{
+      color:#fff;
+    }
+
+    @media (max-width: 980px){
+      .hero-grid,
+      .grid-2,
+      .grid-3,
+      .pro-grid{
+        grid-template-columns:1fr;
+      }
+
+      .nav{
+        flex-wrap:wrap;
+        padding:14px 0;
+      }
+
+      .nav-links{
+        width:100%;
+      }
+
+      .hero{
+        padding-top:44px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .hero-card,
+      .hero-side,
+      .card,
+      .cta-box{
+        padding:22px;
+      }
+
+      h1{
+        font-size:2.1rem;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .cta-top{
+        width:100%;
+      }
+
+      .brand img{
+        height:32px;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Quanto de argamassa por m²?",
+    "url":"https://www.mestrepiso.com.br/quanto-de-argamassa-por-m2.html",
+    "description":"Guia para calcular quanto de argamassa usar por m² de piso, com consumo médio, rendimento e orientações para obra.",
+    "publisher":{
+      "@type":"Organization",
+      "name":"Mestre Piso",
+      "url":"https://www.mestrepiso.com.br/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Quanto de argamassa se usa por m² de piso?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"O consumo de argamassa por m² varia conforme o tamanho do piso, o tipo de desempenadeira, a espessura da camada e o estado da base. Em muitos casos residenciais, o consumo costuma ficar em uma faixa aproximada de 4 a 8 kg por m², podendo ser maior em situações específicas."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Quantos metros quadrados faz um saco de argamassa?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"O rendimento depende do peso do saco e do consumo real na obra. Um saco pode render mais ou menos área conforme o piso, o nivelamento da base e a espessura aplicada."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Piso maior gasta mais argamassa?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Em muitos casos, pisos maiores exigem mais atenção na aplicação e podem demandar maior consumo, principalmente quando a superfície precisa de melhor acomodação ou dupla colagem."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Como evitar desperdício de argamassa na obra?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Para reduzir desperdício, é importante preparar bem a base, escolher a argamassa correta, usar a desempenadeira adequada, respeitar o tempo de aplicação e planejar a paginação do piso antes do assentamento."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="./index.html" class="brand" aria-label="Mestre Piso">
+        <img src="./assets/logo-mestre-piso-horizontal.png" alt="Mestre Piso" />
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="./index.html">Início</a>
+        <a href="#consumo">Consumo</a>
+        <a href="#calculo">Como calcular</a>
+        <a href="#pro">Mestre Piso PRO</a>
+        <a href="#faq">Perguntas frequentes</a>
+      </nav>
+
+      <a
+        class="cta-top"
+        href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Baixar o app
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">Consumo de material • Planejamento de obra</div>
+          <h1>Quanto de argamassa por m²? Veja como calcular sem comprar material errado</h1>
+          <p>
+            Saber <strong>quanto de argamassa usar por m²</strong> é essencial para evitar falta de material,
+            desperdício e atraso na obra. O consumo real depende do tamanho do piso, do tipo de base,
+            da espessura da aplicação e da técnica de assentamento.
+          </p>
+          <p style="margin-top:14px;">
+            Nesta página, você vai entender o consumo médio, o que altera o rendimento e como fazer um
+            cálculo mais seguro antes de comprar. E, para ir além da estimativa, o <strong>Mestre Piso</strong>
+            ajuda você a planejar paginação, quantitativos, material e argamassa com mais precisão.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="btn-primary"
+              href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Baixar Mestre Piso
+            </a>
+            <a class="btn-secondary" href="#consumo">Ver consumo médio</a>
+            <a class="btn-secondary" href="./calculadora-de-piso.html">Usar calculadora de piso</a>
+          </div>
+        </div>
+
+        <aside class="hero-side hero-card">
+          <div class="stat-list">
+            <div class="stat">
+              <strong>Compra mais assertiva</strong>
+              <span>Entenda o consumo por m² e reduza erro na compra de argamassa.</span>
+            </div>
+            <div class="stat">
+              <strong>Menos desperdício</strong>
+              <span>Base ruim, piso grande e aplicação errada aumentam muito o consumo.</span>
+            </div>
+            <div class="stat">
+              <strong>Planejamento profissional</strong>
+              <span>Use o app Mestre Piso para calcular paginação, peças, perdas, material e argamassa.</span>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="consumo">
+      <div class="container">
+        <h2 class="section-title">Tabela de consumo médio de argamassa por m²</h2>
+        <p class="section-sub">
+          Não existe um número único que sirva para toda obra. O consumo varia conforme o fabricante,
+          o tipo de produto, o tamanho da peça cerâmica ou porcelanato, a base e a forma de aplicação.
+          Mesmo assim, existe uma referência prática que ajuda bastante no orçamento inicial.
+        </p>
+
+        <div class="card">
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Situação de uso</th>
+                  <th>Faixa de consumo por m²</th>
+                  <th>Observação prática</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Pisos menores e base bem regular</td>
+                  <td>cerca de 4 a 5 kg/m²</td>
+                  <td>Normalmente ocorre quando a superfície está nivelada e a aplicação está bem controlada.</td>
+                </tr>
+                <tr>
+                  <td>Pisos médios em áreas residenciais</td>
+                  <td>cerca de 5 a 6 kg/m²</td>
+                  <td>Faixa comum em muitas obras internas, dependendo da desempenadeira utilizada.</td>
+                </tr>
+                <tr>
+                  <td>Peças maiores ou necessidade de melhor acomodação</td>
+                  <td>cerca de 6 a 8 kg/m²</td>
+                  <td>O consumo sobe quando a peça exige mais regularização ou técnica mais criteriosa.</td>
+                </tr>
+                <tr>
+                  <td>Base irregular ou aplicação mais espessa</td>
+                  <td>pode passar de 8 kg/m²</td>
+                  <td>Nesses casos, comprar material sem margem costuma gerar erro.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+
+          <p class="note">
+            Importante: essa tabela serve como <strong>referência inicial</strong>. O rendimento real deve sempre ser
+            conferido com a embalagem do fabricante e com as condições reais da obra.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-3">
+        <article class="card">
+          <h3>1. Tamanho do piso</h3>
+          <p>
+            Quanto maior a peça, maior costuma ser a exigência de aplicação correta. Em muitos casos,
+            peças grandes podem elevar o consumo de argamassa por m², principalmente quando a base
+            não está perfeita.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>2. Estado da base</h3>
+          <p>
+            Base irregular, com desnível ou imperfeições aumenta o consumo. Quando o contrapiso não está
+            bom, a argamassa acaba compensando parte do problema, e isso encarece a execução.
+          </p>
+        </article>
+
+        <article class="card">
+          <h3>3. Técnica de assentamento</h3>
+          <p>
+            A escolha da desempenadeira, a forma de espalhar o material e a necessidade de dupla colagem
+            impactam diretamente o rendimento final do saco.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="calculo">
+      <div class="container grid-2">
+        <div class="card">
+          <h2>Como calcular quanto de argamassa comprar</h2>
+          <p>
+            Para chegar a uma estimativa mais segura, você pode usar uma lógica simples:
+          </p>
+
+          <div class="steps">
+            <div class="step">
+              Meça a área total em m² onde o piso será assentado.
+            </div>
+            <div class="step">
+              Defina uma faixa de consumo por m² compatível com o tipo de piso e a condição da base.
+            </div>
+            <div class="step">
+              Multiplique a área pelo consumo médio estimado.
+            </div>
+            <div class="step">
+              Adicione uma margem de segurança para perdas e variações da obra.
+            </div>
+          </div>
+
+          <p style="margin-top:18px;">
+            <span class="highlight">Exemplo:</span> se uma área tem 40 m² e o consumo estimado é de 5 kg/m²,
+            o consumo base seria de 200 kg de argamassa. Depois disso, vale acrescentar uma reserva técnica
+            para evitar falta de material no meio da execução.
+          </p>
+        </div>
+
+        <div class="card">
+          <h2>O que mais influencia no rendimento</h2>
+          <ul class="mini-list">
+            <li><strong>Nivelamento da base:</strong> quanto pior a base, maior o gasto.</li>
+            <li><strong>Tamanho e tipo de revestimento:</strong> peças maiores podem exigir mais material.</li>
+            <li><strong>Área interna ou externa:</strong> algumas aplicações pedem maior rigor técnico.</li>
+            <li><strong>Ferramenta usada:</strong> a desempenadeira influencia a camada aplicada.</li>
+            <li><strong>Mão de obra:</strong> aplicação mal controlada gera desperdício real.</li>
+            <li><strong>Planejamento:</strong> paginação ruim pode aumentar perdas e retrabalho.</li>
+          </ul>
+
+          <p style="margin-top:18px;">
+            Por isso, o ideal não é olhar apenas o saco de argamassa. O certo é analisar
+            <strong>o sistema da obra como um todo</strong>: piso, ambiente, paginação, recortes e execução.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <article class="card">
+          <h2>Quantos m² rende um saco de argamassa?</h2>
+          <p>
+            Essa é uma das dúvidas mais comuns. A resposta depende do peso do saco e, principalmente,
+            do consumo real por metro quadrado na sua obra.
+          </p>
+          <p>
+            Na prática, o rendimento do saco diminui quando a base está ruim, quando há necessidade de
+            aplicação mais carregada ou quando o revestimento pede mais cuidado no assentamento.
+          </p>
+          <p>
+            Por isso, ao invés de confiar em um único número fixo, o melhor caminho é usar a
+            <strong>área da obra + consumo estimado + margem de segurança</strong>.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Como evitar desperdício de argamassa</h2>
+          <p>
+            O desperdício começa antes mesmo do assentamento. Quando a obra não é bem planejada,
+            aumentam os recortes, cresce o retrabalho e o consumo de material foge do previsto.
+          </p>
+          <ul class="mini-list">
+            <li><strong>Regularize a base</strong> antes da aplicação.</li>
+            <li><strong>Use a argamassa correta</strong> para o tipo de ambiente e revestimento.</li>
+            <li><strong>Planeje a paginação</strong> antes de começar a assentar.</li>
+            <li><strong>Compre com margem</strong>, mas sem exagero.</li>
+            <li><strong>Controle execução e recortes</strong> para evitar retrabalho.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="card">
+          <h2 class="section-title" style="margin-bottom:12px;">Onde o Mestre Piso entra nisso?</h2>
+          <p class="section-sub" style="margin-bottom:0;">
+            Saber o consumo de argamassa por m² é importante. Mas o profissional que quer acertar de verdade
+            precisa ir além do consumo médio.
+          </p>
+
+          <div class="grid-3" style="margin-top:22px;">
+            <div class="card" style="padding:22px;">
+              <h3>Calcula paginação</h3>
+              <p>Visualize a distribuição do piso antes da execução e reduza erro na obra.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <h3>Ajuda no quantitativo</h3>
+              <p>Tenha mais clareza sobre peças, caixas, recortes, perdas e planejamento da execução.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <h3>Gera mais confiança profissional</h3>
+              <p>Use relatórios e planejamento mais técnico para orçamento, compra de material e execução.</p>
+            </div>
+          </div>
+
+          <p style="margin-top:18px;">
+            Em vez de trabalhar só no “olhômetro”, você consegue tomar decisão com mais segurança.
+            Isso ajuda tanto quem executa quanto quem vende o serviço.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="pro">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="section-title">No Mestre Piso PRO você também calcula a quantidade de argamassa</h2>
+          <p>
+            Além de calcular paginação, peças, caixas, recortes e perdas, a <strong>versão PRO do Mestre Piso</strong>
+            ajuda no planejamento profissional da obra com recursos que aumentam a segurança na compra do material.
+          </p>
+          <p>
+            Isso inclui apoio para o cálculo da <strong>quantidade de argamassa</strong>, reduzindo improviso,
+            evitando erro de compra e ajudando você a apresentar um serviço mais profissional para o cliente.
+          </p>
+
+          <div class="pro-grid">
+            <div class="card">
+              <h3>O que o PRO ajuda você a fazer</h3>
+              <ul class="pro-feature-list">
+                <li><strong>Calcular argamassa com mais precisão</strong> para executar o serviço com menos risco de erro.</li>
+                <li><strong>Planejar paginação e cortes</strong> antes de começar a obra.</li>
+                <li><strong>Melhorar a compra do material</strong> com visão mais profissional.</li>
+                <li><strong>Gerar PDF técnico e orçamento</strong> para apresentar melhor ao cliente.</li>
+                <li><strong>Evitar prejuízo por cálculo errado</strong> e aumentar sua confiança na execução.</li>
+              </ul>
+
+              <div class="hero-actions" style="margin-top:22px;">
+                <a class="btn-secondary" href="./calculadora-de-piso.html">
+                  Ver calculadora de piso
+                </a>
+              </div>
+            </div>
+
+            <div class="grid-2" style="grid-template-columns:1fr; gap:18px;">
+              <div class="card price-card price-highlight">
+                <div class="price-badge">PLANO MAIS INDICADO</div>
+                <h3 style="margin-bottom:8px;">Mestre Piso PRO Mensal</h3>
+                <p class="price">R$ 19,90 <span>/mês</span></p>
+                <p class="price-copy">Mais barato do que perder um serviço por erro de cálculo.</p>
+                <p>
+                  Ideal para quem quer liberar rápido os recursos profissionais e começar a trabalhar
+                  com mais segurança na compra do material, cálculo de argamassa e apresentação do serviço.
+                </p>
+                <a
+                  class="btn-primary"
+                  href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="margin-top:12px;"
+                >
+                  Baixar versão PRO
+                </a>
+              </div>
+
+              <div class="card price-card">
+                <h3 style="margin-bottom:8px;">Mestre Piso PRO Anual</h3>
+                <p class="price">R$ 149,99 <span>/ano</span></p>
+                <p>
+                  Para quem quer usar o Mestre Piso PRO durante todo o ano com mais economia no longo prazo.
+                </p>
+                <a
+                  class="btn-secondary"
+                  href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style="margin-top:12px;"
+                >
+                  Ver planos no app
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Perguntas frequentes sobre argamassa por m²</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Quanto de argamassa se usa por m² de piso?</summary>
+            <p>
+              O consumo varia conforme o piso, a base, a desempenadeira e a espessura de aplicação.
+              Em muitas situações, a referência prática costuma ficar em uma faixa aproximada de
+              <strong>4 a 8 kg por m²</strong>, podendo ultrapassar isso em obras mais exigentes.
+            </p>
+          </details>
+
+          <details>
+            <summary>Quantos metros quadrados faz um saco de argamassa?</summary>
+            <p>
+              O rendimento do saco depende do peso da embalagem e do consumo real por m².
+              Quanto maior o consumo na obra, menor será a área atendida por cada saco.
+            </p>
+          </details>
+
+          <details>
+            <summary>Piso grande gasta mais argamassa?</summary>
+            <p>
+              Em muitos casos, sim. Peças maiores exigem mais controle de aplicação e podem elevar o
+              consumo, especialmente quando há necessidade de melhor acomodação ou quando a base não está ideal.
+            </p>
+          </details>
+
+          <details>
+            <summary>Base ruim aumenta o consumo?</summary>
+            <p>
+              Aumenta bastante. Desníveis e imperfeições fazem a argamassa compensar parte da irregularidade,
+              elevando o gasto por metro quadrado.
+            </p>
+          </details>
+
+          <details>
+            <summary>Como saber a quantidade certa antes de comprar?</summary>
+            <p>
+              O melhor caminho é medir a área, estimar o consumo compatível com a obra e aplicar uma margem
+              de segurança. Além disso, usar um app como o Mestre Piso ajuda a planejar melhor recortes,
+              paginação, quantitativos e compra de material.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="section-title">Quer planejar piso, material e argamassa com mais precisão?</h2>
+          <p>
+            O Mestre Piso ajuda você a sair do cálculo genérico e organizar melhor a execução da obra.
+            Ideal para pedreiros, assentadores, construtores e profissionais que querem reduzir desperdício,
+            passar mais confiança ao cliente e trabalhar de forma mais profissional.
+          </p>
+
+          <div class="hero-actions" style="justify-content:center;">
+            <a
+              class="btn-primary"
+              href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Baixar agora na Play Store
+            </a>
+            <a class="btn-secondary" href="./index.html">Voltar para o site</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© 2026 Mestre Piso. Todos os direitos reservados.</div>
+      <div>
+        <a href="./index.html">Página inicial</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
