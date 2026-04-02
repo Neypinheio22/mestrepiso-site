@@ -4,29 +4,29 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-  <title>Calculadora de Piso Online | Baixe o app Mestre Piso</title>
-  <meta name="description" content="Use a calculadora de piso online do Mestre Piso para calcular área, quantidade de peças e caixas. Baixe o app para liberar paginação, cortes e PDF." />
-  <meta name="keywords" content="calculadora de piso, calcular piso, quantidade de piso, quantas caixas de piso comprar, paginação de piso, app Mestre Piso" />
+  <title>Calculadora de Piso Online | Mestre Piso PRO com PDF, orçamento e cálculo financeiro</title>
+  <meta name="description" content="Use a calculadora de piso online do Mestre Piso para calcular área, peças e caixas. No app PRO, libere cálculo financeiro, argamassa e rejunte, relatório técnico, PDF e orçamento profissional." />
+  <meta name="keywords" content="calculadora de piso, calcular piso, quantidade de piso, quantas caixas de piso comprar, paginação de piso, cálculo de argamassa, cálculo de rejunte, orçamento de piso, PDF técnico, Mestre Piso PRO" />
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://www.mestrepiso.com.br/calculadora-de-piso.html" />
 
   <meta property="og:locale" content="pt_BR" />
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Calculadora de Piso Online | Mestre Piso" />
-  <meta property="og:description" content="Calcule área, peças e caixas. Baixe o app Mestre Piso para liberar paginação completa." />
+  <meta property="og:title" content="Calculadora de Piso Online | Mestre Piso PRO" />
+  <meta property="og:description" content="Calcule área, peças e caixas. Libere no app PRO cálculo financeiro, argamassa e rejunte, PDF técnico e orçamento profissional." />
   <meta property="og:url" content="https://www.mestrepiso.com.br/calculadora-de-piso.html" />
   <meta property="og:site_name" content="Mestre Piso" />
   <meta property="og:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg" />
 
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Calculadora de Piso Online | Mestre Piso" />
-  <meta name="twitter:description" content="Calcule área, peças e caixas. Baixe o app Mestre Piso para liberar paginação completa." />
+  <meta name="twitter:title" content="Calculadora de Piso Online | Mestre Piso PRO" />
+  <meta name="twitter:description" content="Calcule piso e libere no app PRO paginação, cálculo financeiro, argamassa e rejunte, PDF técnico e orçamento profissional." />
   <meta name="twitter:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg" />
 
   <link rel="icon" href="assets/favicon.png" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
 
   <style>
     :root{
@@ -38,7 +38,12 @@
       --blue:#2f6df6;
       --blue-dark:#1e57d8;
       --green:#2db45d;
+      --green-dark:#21944a;
+      --gold:#f5b400;
+      --soft:#eef4ff;
+      --soft-green:#eefbf3;
       --shadow:0 18px 45px rgba(16,43,70,.10);
+      --shadow-strong:0 24px 56px rgba(16,43,70,.16);
       --radius:22px;
       --radius-sm:14px;
       --max:1180px;
@@ -97,7 +102,7 @@
     .menu{
       display:flex;
       align-items:center;
-      gap:26px;
+      gap:24px;
       color:var(--muted);
       font-weight:600;
     }
@@ -126,6 +131,15 @@
     }
 
     .btn-primary:hover{transform:translateY(-1px)}
+
+    .btn-green{
+      color:#fff;
+      background:linear-gradient(135deg,var(--green),var(--green-dark));
+      box-shadow:0 12px 25px rgba(45,180,93,.22);
+    }
+
+    .btn-green:hover{transform:translateY(-1px)}
+
     .btn-outline{
       color:var(--text);
       background:#fff;
@@ -133,12 +147,12 @@
     }
 
     .hero{
-      padding:56px 0 34px;
+      padding:56px 0 26px;
     }
 
     .hero-grid{
       display:grid;
-      grid-template-columns:1.08fr .92fr;
+      grid-template-columns:1.05fr .95fr;
       gap:34px;
       align-items:center;
     }
@@ -151,24 +165,45 @@
       border-radius:999px;
       background:#eaf1ff;
       color:var(--blue-dark);
-      font-weight:700;
+      font-weight:800;
       font-size:.92rem;
       margin-bottom:18px;
     }
 
     h1{
       margin:0 0 18px;
-      font-size:clamp(2.4rem,5vw,4.4rem);
-      line-height:.98;
-      letter-spacing:-.03em;
+      font-size:clamp(2.5rem,5vw,4.6rem);
+      line-height:.96;
+      letter-spacing:-.04em;
     }
 
     .sub{
-      margin:0 0 22px;
-      font-size:1.22rem;
-      line-height:1.55;
+      margin:0 0 20px;
+      font-size:1.18rem;
+      line-height:1.65;
       color:var(--muted);
       max-width:760px;
+    }
+
+    .hero-highlight{
+      background:linear-gradient(180deg,#ffffff 0%,#f8fbff 100%);
+      border:1px solid var(--line);
+      border-radius:20px;
+      padding:18px 18px 14px;
+      margin:0 0 22px;
+      box-shadow:0 10px 26px rgba(16,43,70,.06);
+    }
+
+    .hero-highlight strong{
+      display:block;
+      font-size:1rem;
+      margin-bottom:8px;
+    }
+
+    .hero-highlight p{
+      margin:0;
+      color:#3f4f63;
+      line-height:1.6;
     }
 
     .bullets{
@@ -181,10 +216,10 @@
 
     .bullets li{
       display:flex;
-      align-items:center;
+      align-items:flex-start;
       gap:12px;
       color:#334256;
-      font-size:1.08rem;
+      font-size:1.06rem;
       font-weight:500;
     }
 
@@ -199,13 +234,14 @@
       color:var(--blue);
       font-weight:900;
       flex:0 0 auto;
+      margin-top:1px;
     }
 
     .actions{
       display:flex;
       gap:12px;
       flex-wrap:wrap;
-      margin-bottom:18px;
+      margin-bottom:16px;
     }
 
     .micro{
@@ -214,13 +250,30 @@
       font-weight:600;
     }
 
+    .trust-row{
+      display:flex;
+      flex-wrap:wrap;
+      gap:10px;
+      margin-top:18px;
+    }
+
+    .trust-pill{
+      padding:10px 14px;
+      border-radius:999px;
+      background:#fff;
+      border:1px solid var(--line);
+      color:#456;
+      font-size:.92rem;
+      font-weight:700;
+    }
+
     .mock-wrap{
       display:flex;
       justify-content:center;
     }
 
     .phone{
-      width:min(330px,100%);
+      width:min(340px,100%);
       background:#101419;
       border-radius:38px;
       padding:12px;
@@ -245,7 +298,7 @@
       border-radius:28px;
       overflow:hidden;
       background:linear-gradient(180deg,#f8fbff 0%,#f2f6fb 100%);
-      min-height:650px;
+      min-height:700px;
       border:1px solid rgba(255,255,255,.2);
       position:relative;
     }
@@ -423,7 +476,7 @@
 
     .lock-card{
       width:100%;
-      max-width:250px;
+      max-width:268px;
       background:rgba(255,255,255,.98);
       border:1px solid #dce6f2;
       box-shadow:0 20px 40px rgba(16,43,70,.12);
@@ -433,8 +486,8 @@
     }
 
     .lock-icon{
-      width:50px;
-      height:50px;
+      width:52px;
+      height:52px;
       border-radius:16px;
       margin:0 auto 12px;
       display:flex;
@@ -458,7 +511,7 @@
     }
 
     .section{
-      padding:34px 0 72px;
+      padding:28px 0 72px;
     }
 
     .section-title{
@@ -468,7 +521,7 @@
     }
 
     .section-sub{
-      max-width:860px;
+      max-width:880px;
       margin:0 auto 34px;
       text-align:center;
       color:var(--muted);
@@ -506,10 +559,171 @@
 
     .card h3{
       margin:0 0 8px;
-      font-size:1.18rem;
+      font-size:1.14rem;
+      line-height:1.3;
     }
 
     .card p{
+      margin:0;
+      color:var(--muted);
+      line-height:1.7;
+    }
+
+    .two-col{
+      display:grid;
+      grid-template-columns:1.1fr .9fr;
+      gap:22px;
+      align-items:stretch;
+    }
+
+    .feature-box{
+      background:#fff;
+      border:1px solid #e3ebf5;
+      border-radius:24px;
+      padding:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .feature-box h3{
+      margin:0 0 10px;
+      font-size:1.35rem;
+    }
+
+    .feature-box .pro-strong{
+      margin:10px 0 14px;
+      font-weight:700;
+      color:var(--blue-dark);
+      font-size:1rem;
+    }
+
+    .feature-list{
+      list-style:none;
+      padding:0;
+      margin:0 0 14px;
+      display:grid;
+      gap:12px;
+    }
+
+    .feature-list li{
+      display:flex;
+      gap:12px;
+      align-items:flex-start;
+      color:#334256;
+      line-height:1.6;
+    }
+
+    .pro-note{
+      margin:12px 0 0;
+      padding:14px 16px;
+      border-radius:16px;
+      background:#f7fbff;
+      border:1px solid #dce7f3;
+      color:#3d4f63;
+      font-size:.95rem;
+      line-height:1.6;
+    }
+
+    .pro-box{
+      background:linear-gradient(135deg,#0f2a44 0%,#1d4c7e 100%);
+      color:#fff;
+      border:1px solid rgba(255,255,255,.08);
+      border-radius:26px;
+      padding:28px;
+      box-shadow:var(--shadow-strong);
+    }
+
+    .pro-tag{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:8px 12px;
+      border-radius:999px;
+      background:rgba(255,255,255,.12);
+      font-weight:800;
+      font-size:.9rem;
+      margin-bottom:14px;
+    }
+
+    .pro-box h3{
+      margin:0 0 8px;
+      font-size:1.55rem;
+      line-height:1.2;
+    }
+
+    .pro-impact{
+      margin:0 0 14px;
+      font-weight:800;
+      color:#9fd0ff;
+      font-size:1rem;
+    }
+
+    .pro-box p{
+      margin:0 0 16px;
+      color:rgba(255,255,255,.92);
+      line-height:1.7;
+    }
+
+    .pro-points{
+      list-style:none;
+      padding:0;
+      margin:0 0 18px;
+      display:grid;
+      gap:10px;
+    }
+
+    .pro-points li{
+      display:flex;
+      gap:10px;
+      line-height:1.55;
+      color:#fff;
+    }
+
+    .pro-points span{
+      color:#8ff0b0;
+      font-weight:900;
+    }
+
+    .pro-price{
+      margin:14px 0 18px;
+      color:rgba(255,255,255,.92);
+      font-size:.95rem;
+      line-height:1.6;
+    }
+
+    .pro-actions{
+      display:flex;
+      gap:12px;
+      flex-wrap:wrap;
+    }
+
+    .btn-light{
+      color:#fff;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.18);
+    }
+
+    .btn-light:hover{transform:translateY(-1px)}
+
+    .faq-grid{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:18px;
+    }
+
+    .faq{
+      background:#fff;
+      border:1px solid #e3ebf5;
+      border-radius:20px;
+      padding:22px;
+      box-shadow:var(--shadow);
+    }
+
+    .faq h3{
+      margin:0 0 10px;
+      font-size:1.05rem;
+    }
+
+    .faq p{
       margin:0;
       color:var(--muted);
       line-height:1.7;
@@ -551,6 +765,8 @@
       .hero-grid{grid-template-columns:1fr}
       .mock-wrap{order:-1}
       .cards{grid-template-columns:repeat(2,1fr)}
+      .two-col{grid-template-columns:1fr}
+      .faq-grid{grid-template-columns:1fr}
       .cta-band{flex-direction:column;align-items:flex-start}
     }
 
@@ -560,7 +776,7 @@
       .nav{min-height:74px}
       .brand span{font-size:1.15rem}
       h1{font-size:2.35rem}
-      .sub{font-size:1.08rem}
+      .sub{font-size:1.05rem}
       .btn{width:100%}
       .actions{flex-direction:column}
       .phone{padding:10px;border-radius:30px;width:min(300px,100%)}
@@ -568,6 +784,7 @@
       .cards{grid-template-columns:1fr}
       .result-grid{grid-template-columns:1fr}
       .cta-band{padding:24px}
+      .pro-actions{flex-direction:column}
     }
   </style>
 
@@ -578,7 +795,7 @@
     "name": "Mestre Piso",
     "applicationCategory": "BusinessApplication",
     "operatingSystem": "Android",
-    "description": "Aplicativo para calcular piso, quantidade de caixas, cortes e paginação profissional de ambientes.",
+    "description": "Aplicativo para calcular piso, caixas, paginação profissional, argamassa, rejunte, custos, PDF técnico e orçamento profissional.",
     "url": "https://www.mestrepiso.com.br/calculadora-de-piso.html",
     "downloadUrl": "https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso",
     "publisher": {
@@ -600,6 +817,7 @@
 
       <nav class="menu" aria-label="Menu principal">
         <a href="#beneficios">Benefícios</a>
+        <a href="#pro">Mestre Piso PRO</a>
         <a href="#como-funciona">Como funciona</a>
         <a href="#download">Baixar app</a>
       </nav>
@@ -618,16 +836,24 @@
     <div class="container">
       <div class="hero-grid">
         <div>
-          <span class="eyebrow">Calculadora de piso online</span>
-          <h1>Calcule área, peças e caixas. Libere a paginação completa no app Mestre Piso.</h1>
+          <span class="eyebrow">Calculadora de piso online + versão PRO no app</span>
+          <h1>Calcule piso em segundos e transforme o resultado em apresentação profissional.</h1>
+
           <p class="sub">
-            Informe as medidas do ambiente, o tamanho do piso e o rendimento por caixa. A página calcula o básico para você, e o app libera paginação detalhada, cortes e PDF.
+            Faça o cálculo inicial de área, peças e caixas aqui na página. No <strong>Mestre Piso PRO</strong>, libere recursos que ajudam a fechar serviços com mais segurança: cálculo financeiro de material, cálculo de argamassa e rejunte, relatório financeiro de compatibilidade de piso, exportação de PDF técnico e orçamento profissional em PDF.
           </p>
 
+          <div class="hero-highlight">
+            <strong>Para quem é essa solução?</strong>
+            <p>
+              Ideal para pedreiros, assentadores, mestres de obra, engenheiros, lojas e profissionais que querem calcular com mais precisão, apresentar melhor para o cliente e vender um serviço mais profissional.
+            </p>
+          </div>
+
           <ul class="bullets">
-            <li><span class="check">✓</span><span>Cálculo real de área, peças e caixas</span></li>
-            <li><span class="check">✓</span><span>Prévia útil antes da compra do material</span></li>
-            <li><span class="check">✓</span><span>Paginação detalhada desbloqueada no aplicativo</span></li>
+            <li><span class="check">✓</span><span>Cálculo real de área, peças e caixas para a compra inicial</span></li>
+            <li><span class="check">✓</span><span>No PRO: cálculo financeiro de material, argamassa e rejunte</span></li>
+            <li><span class="check">✓</span><span>No PRO: PDF técnico e orçamento profissional pronto para apresentar</span></li>
           </ul>
 
           <div class="actions">
@@ -637,12 +863,18 @@
               Baixar o app agora
             </a>
 
-            <a class="btn btn-outline" href="#como-funciona">
-              Ver como funciona
+            <a class="btn btn-outline" href="#pro">
+              Ver funções do PRO
             </a>
           </div>
 
-          <div class="micro">Disponível gratuitamente na Google Play.</div>
+          <div class="micro">Comece com o cálculo básico na página e evolua para o planejamento profissional no app.</div>
+
+          <div class="trust-row">
+            <div class="trust-pill">Cálculo inicial grátis</div>
+            <div class="trust-pill">Recursos PRO para profissionais</div>
+            <div class="trust-pill">PDF e orçamento em um só app</div>
+          </div>
         </div>
 
         <div class="mock-wrap">
@@ -696,7 +928,7 @@
               <div class="result-card">
                 <div class="result-head">
                   <h2>Resultado inicial do seu cálculo</h2>
-                  <p>Esses dados já ajudam na compra. A paginação detalhada continua no app.</p>
+                  <p>Esses dados já ajudam na compra. O planejamento técnico e financeiro completo continua no app.</p>
                 </div>
 
                 <div class="result-grid">
@@ -732,14 +964,14 @@
                     <div class="lock-overlay">
                       <div class="lock-card">
                         <div class="lock-icon">🔒</div>
-                        <h3>Paginação detalhada bloqueada</h3>
+                        <h3>Recursos técnicos e financeiros no PRO</h3>
                         <p>
-                          Baixe o app Mestre Piso para ver cortes, paginação completa, diagonais e relatório em PDF.
+                          Libere paginação, cortes, cálculo de argamassa e rejunte, relatório financeiro, PDF técnico e orçamento profissional.
                         </p>
-                        <a class="btn btn-primary"
+                        <a class="btn btn-green"
                            href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
                            target="_blank" rel="noopener noreferrer">
-                          Baixar na Play Store
+                          Quero liberar no app
                         </a>
                       </div>
                     </div>
@@ -755,34 +987,92 @@
 
   <section id="beneficios" class="section">
     <div class="container">
-      <h2 class="section-title">Por que usar o Mestre Piso</h2>
+      <h2 class="section-title">Mais do que uma calculadora simples</h2>
       <p class="section-sub">
-        Em vez de fazer conta manual e correr risco de erro na compra, você faz um cálculo útil na página e libera o planejamento completo no app.
+        A página resolve o cálculo inicial. O aplicativo transforma esse resultado em uma ferramenta de trabalho mais completa, pensada para quem quer reduzir erro, melhorar a apresentação e aumentar a chance de fechar serviços.
       </p>
 
       <div class="cards">
         <div class="card">
           <div class="icon">🧮</div>
-          <h3>Calcule o básico na hora</h3>
-          <p>Área, quantidade de peças e caixas calculadas rapidamente para ajudar na decisão inicial.</p>
+          <h3>Cálculo inicial imediato</h3>
+          <p>Descubra área, peças e caixas rapidamente para já ter uma base de compra e planejamento.</p>
         </div>
 
         <div class="card">
-          <div class="icon">📦</div>
-          <h3>Veja quantas caixas comprar</h3>
-          <p>Reduza o risco de faltar ou sobrar material com um cálculo inicial mais direto.</p>
+          <div class="icon">💰</div>
+          <h3>Visão financeira do material</h3>
+          <p>No PRO, avance do cálculo físico para o cálculo financeiro do material e do custo da obra.</p>
         </div>
 
         <div class="card">
-          <div class="icon">📐</div>
-          <h3>Libere a paginação no app</h3>
-          <p>Tenha no celular uma visão profissional da distribuição das peças antes da execução.</p>
+          <div class="icon">🧱</div>
+          <h3>Argamassa e rejunte</h3>
+          <p>Tenha uma referência mais completa de consumo para deixar a compra mais segura e profissional.</p>
         </div>
 
         <div class="card">
           <div class="icon">📄</div>
-          <h3>Gere PDF e apresente ao cliente</h3>
-          <p>Use o aplicativo para mostrar a solução com mais clareza e mais confiança na obra.</p>
+          <h3>PDF e orçamento profissional</h3>
+          <p>Apresente relatório técnico e orçamento em PDF com mais clareza e valor percebido pelo cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="pro" class="section">
+    <div class="container">
+      <div class="two-col">
+        <div class="feature-box">
+          <h3>O que o Mestre Piso PRO libera para o profissional</h3>
+          <p class="pro-strong">Pare de perder dinheiro na obra por erro de cálculo.</p>
+
+          <ul class="feature-list">
+            <li><span class="check">✓</span><span><strong>Cálculo completo de custo de material:</strong> piso, perdas e visão financeira para comprar com mais segurança.</span></li>
+            <li><span class="check">✓</span><span><strong>Cálculo automático de argamassa e rejunte:</strong> complemente a compra com mais precisão e menos improviso.</span></li>
+            <li><span class="check">✓</span><span><strong>Relatório financeiro de compatibilidade de piso:</strong> ajude a avaliar melhor a solução escolhida e evitar prejuízo.</span></li>
+            <li><span class="check">✓</span><span><strong>Desconto de ambiente inteligente:</strong> ajuste áreas e reduza desperdício desnecessário.</span></li>
+            <li><span class="check">✓</span><span><strong>Paginação profissional:</strong> reta e diagonal com mais controle visual antes da execução.</span></li>
+            <li><span class="check">✓</span><span><strong>Amarração 15% e 50%:</strong> mais possibilidades de apresentação e planejamento.</span></li>
+            <li><span class="check">✓</span><span><strong>Exportação de PDF técnico completo:</strong> leve um resultado mais apresentável para obra, equipe ou cliente.</span></li>
+            <li><span class="check">✓</span><span><strong>Geração de orçamento profissional em PDF:</strong> aumente sua autoridade e facilite o fechamento do serviço.</span></li>
+            <li><span class="check">✓</span><span><strong>Sem anúncios:</strong> experiência mais limpa para trabalhar com foco.</span></li>
+          </ul>
+
+          <div class="pro-note">
+            💡 Um único erro de cálculo pode custar mais que a assinatura do app.
+          </div>
+        </div>
+
+        <div class="pro-box">
+          <div class="pro-tag">⭐ Mestre Piso PRO</div>
+          <h3>Mais precisão, economia e lucro na obra.</h3>
+          <p class="pro-impact">Transforme cálculo em ferramenta de venda e apresentação profissional.</p>
+          <p>
+            Quem chega aqui quer calcular piso. Quem baixa o app encontra uma solução mais completa para obra, compra de material, apresentação técnica e orçamento com mais valor percebido pelo cliente.
+          </p>
+          <ul class="pro-points">
+            <li><span>✓</span>Melhore a compra do material com mais informação</li>
+            <li><span>✓</span>Mostre valor com relatório técnico e PDF profissional</li>
+            <li><span>✓</span>Ganhe confiança ao apresentar orçamento ao cliente</li>
+            <li><span>✓</span>Reduza improviso e aumente a percepção de profissionalismo</li>
+          </ul>
+
+          <div class="pro-price">
+            Mensal: <strong>R$ 19,90</strong> • Anual: <strong>R$ 149,99</strong>
+          </div>
+
+          <div class="pro-actions">
+            <a class="btn btn-green"
+               href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
+               target="_blank" rel="noopener noreferrer">
+              Desbloquear versão PRO
+            </a>
+
+            <a class="btn btn-light" href="#download">
+              Ver tudo que o PRO libera
+            </a>
+          </div>
         </div>
       </div>
     </div>
@@ -792,32 +1082,63 @@
     <div class="container">
       <h2 class="section-title">Como funciona</h2>
       <p class="section-sub">
-        A página resolve a parte inicial do cálculo. O app libera os recursos avançados.
+        A página te entrega a etapa inicial. O app leva você para um fluxo mais completo de cálculo, apresentação e orçamento.
       </p>
 
       <div class="cards">
         <div class="card">
           <div class="icon">1</div>
           <h3>Informe as medidas</h3>
-          <p>Digite largura, comprimento, dimensão da peça e rendimento por caixa.</p>
+          <p>Digite largura, comprimento, tamanho da peça e rendimento por caixa para fazer o cálculo inicial.</p>
         </div>
 
         <div class="card">
           <div class="icon">2</div>
-          <h3>Veja o cálculo básico</h3>
-          <p>Receba área do ambiente, área da peça, número de peças e quantidade de caixas.</p>
+          <h3>Receba o cálculo básico</h3>
+          <p>Veja área, quantidade de peças e caixas para ter uma base rápida e útil de compra.</p>
         </div>
 
         <div class="card">
           <div class="icon">3</div>
-          <h3>Desbloqueie no app</h3>
-          <p>Baixe o Mestre Piso para visualizar paginação, cortes, diagonais e relatório final.</p>
+          <h3>Evolua para o PRO</h3>
+          <p>No app, libere paginação, custos, argamassa e rejunte, PDF técnico e orçamento profissional.</p>
         </div>
 
         <div class="card">
           <div class="icon">4</div>
-          <h3>Planeje com mais segurança</h3>
-          <p>Use o aplicativo em obra, orçamento, apresentação para cliente e compra do material.</p>
+          <h3>Apresente melhor</h3>
+          <p>Use o resultado para organizar a obra, passar mais segurança e valorizar sua entrega ao cliente.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Dúvidas comuns de quem chega pela calculadora</h2>
+      <p class="section-sub">
+        Essas são perguntas que normalmente aparecem antes de a pessoa baixar o aplicativo e seguir para os recursos avançados.
+      </p>
+
+      <div class="faq-grid">
+        <div class="faq">
+          <h3>A calculadora online continua funcionando?</h3>
+          <p>Sim. A página continua calculando área, peças e caixas normalmente. O que muda é que agora ela comunica melhor o valor do app e do PRO.</p>
+        </div>
+
+        <div class="faq">
+          <h3>O que fica disponível só no app?</h3>
+          <p>Paginação mais completa, visualização de cortes, cálculo financeiro, argamassa e rejunte, PDF técnico e orçamento profissional em PDF.</p>
+        </div>
+
+        <div class="faq">
+          <h3>Essa página serve só para cliente final?</h3>
+          <p>Não. Ela serve tanto para quem quer uma estimativa inicial quanto para profissionais que depois evoluem para o fluxo completo no aplicativo.</p>
+        </div>
+
+        <div class="faq">
+          <h3>Por que destacar o PRO aqui?</h3>
+          <p>Porque essa página já recebe tráfego. Então ela precisa não apenas calcular, mas também converter o visitante em usuário do app e potencial assinante PRO.</p>
         </div>
       </div>
     </div>
@@ -827,13 +1148,13 @@
     <div class="container">
       <div class="cta-band">
         <div>
-          <h2>Quer liberar o cálculo completo?</h2>
+          <h2>Quer transformar cálculo em apresentação profissional?</h2>
           <p>
-            Baixe o app Mestre Piso e veja paginação profissional, cortes, diagonais, exportação em PDF e uma experiência completa para obra e orçamento.
+            Baixe o app Mestre Piso e avance do cálculo básico para um fluxo profissional com paginação, cálculo financeiro, argamassa e rejunte, relatório técnico, PDF e orçamento em PDF.
           </p>
         </div>
 
-        <a class="btn btn-primary"
+        <a class="btn btn-green"
            href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso"
            target="_blank" rel="noopener noreferrer">
           Baixar na Play Store
