@@ -1,25 +1,60 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+
   <url>
     <loc>https://www.mestrepiso.com.br/</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
   <url>
     <loc>https://www.mestrepiso.com.br/calculadora-de-piso.html</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+
+  <url>
+    <loc>https://www.mestrepiso.com.br/quanto-de-argamassa-por-m2.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mestrepiso.com.br/calcular-piso-por-metro-quadrado.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mestrepiso.com.br/paginacao-de-piso.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mestrepiso.com.br/piso-60x60-quantidade.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.mestrepiso.com.br/calculadora-de-piso-diagonal.html</loc>
+    <lastmod>2026-04-02</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
   <url>
     <loc>https://www.mestrepiso.com.br/politica-de-privacidade.html</loc>
-    <lastmod>2026-03-07</lastmod>
+    <lastmod>2026-04-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.4</priority>
   </url>
+
 </urlset>
-<url><loc>https://www.mestrepiso.com.br/calcular-piso-por-metro-quadrado.html</loc></url>
-<url><loc>https://www.mestrepiso.com.br/paginacao-de-piso.html</loc></url>
-<url><loc>https://www.mestrepiso.com.br/piso-60x60-quantidade.html</loc></url>
-<url><loc>https://www.mestrepiso.com.br/calculadora-de-piso-diagonal.html</loc></url>
