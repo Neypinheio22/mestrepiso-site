@@ -1,0 +1,687 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como calcular piso por metro quadrado | Mestre Piso</title>
+  <meta name="description" content="Aprenda como calcular piso por metro quadrado, estimar peças, caixas e evitar desperdício na obra com mais precisão.">
+  <link rel="canonical" href="https://www.mestrepiso.com.br/calcular-piso-por-metro-quadrado.html">
+  <meta property="og:title" content="Como calcular piso por metro quadrado | Mestre Piso">
+  <meta property="og:description" content="Entenda como calcular piso por m², evitar erros na compra e usar uma calculadora profissional para sua obra.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://www.mestrepiso.com.br/calcular-piso-por-metro-quadrado.html">
+  <meta property="og:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg">
+  <style>
+    * { box-sizing: border-box; }
+
+    :root{
+      --bg:#eef3f8;
+      --card:#ffffff;
+      --text:#10233a;
+      --muted:#5d6b7a;
+      --brand:#0f2a44;
+      --brand-2:#163d63;
+      --accent:#17a34a;
+      --accent-dark:#12803a;
+      --line:#dce5ee;
+      --shadow:0 14px 40px rgba(9, 30, 66, .10);
+      --radius:22px;
+    }
+
+    html{
+      scroll-behavior:smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, Helvetica, sans-serif;
+      background: radial-gradient(circle at top left, #f7fbff 0%, #eef3f8 45%, #e9eff6 100%);
+      color: var(--text);
+      line-height: 1.7;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 1180px;
+      margin: 0 auto;
+      padding-left: 22px;
+      padding-right: 22px;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      backdrop-filter: blur(10px);
+      background: linear-gradient(135deg, rgba(15,42,68,.96), rgba(22,61,99,.96));
+      border-bottom: 1px solid rgba(255,255,255,.08);
+      box-shadow: 0 10px 30px rgba(15,42,68,.18);
+    }
+
+    .topbar {
+      min-height: 84px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+      flex-wrap: wrap;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      text-decoration: none;
+      color: #fff;
+      font-weight: 800;
+    }
+
+    .brand img {
+      height: 52px;
+      width: auto;
+      display: block;
+    }
+
+    .brand-text {
+      display: flex;
+      flex-direction: column;
+      line-height: 1.1;
+    }
+
+    .brand-text strong {
+      font-size: 22px;
+      color: #fff;
+    }
+
+    .brand-text span {
+      font-size: 12px;
+      color: #c8d7e8;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: .9px;
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .nav a {
+      color: #e8f1fb;
+      text-decoration: none;
+      font-weight: 800;
+      padding: 12px 16px;
+      border-radius: 12px;
+      transition: .2s ease;
+    }
+
+    .nav a:hover {
+      background: rgba(255,255,255,.10);
+      color: #fff;
+    }
+
+    .hero {
+      padding: 52px 0 34px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1.15fr) 380px;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      background: #dcecff;
+      color: var(--brand);
+      font-weight: 900;
+      padding: 10px 16px;
+      border-radius: 999px;
+      font-size: 13px;
+      margin-bottom: 16px;
+    }
+
+    h1 {
+      margin: 0 0 16px;
+      font-size: 60px;
+      line-height: 1.05;
+      letter-spacing: -1.5px;
+      color: #0d2035;
+      max-width: 760px;
+    }
+
+    .lead {
+      font-size: 24px;
+      line-height: 1.5;
+      color: #314356;
+      margin: 0 0 26px;
+      max-width: 820px;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 16px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 58px;
+      padding: 0 24px;
+      border-radius: 16px;
+      text-decoration: none;
+      font-weight: 900;
+      font-size: 18px;
+      transition: .2s ease;
+      box-shadow: 0 8px 22px rgba(15,42,68,.08);
+    }
+
+    .btn-primary {
+      background: linear-gradient(180deg, #1db954, var(--accent));
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      transform: translateY(-1px);
+      background: linear-gradient(180deg, #17aa4d, var(--accent-dark));
+    }
+
+    .btn-secondary {
+      background: #fff;
+      color: var(--brand);
+      border: 2px solid var(--brand);
+    }
+
+    .btn-secondary:hover {
+      transform: translateY(-1px);
+      background: #f7fbff;
+    }
+
+    .hero-box {
+      background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .hero-box h3 {
+      margin-top: 0;
+      margin-bottom: 16px;
+      font-size: 22px;
+      color: var(--brand);
+    }
+
+    .hero-box ul {
+      margin: 0;
+      padding-left: 22px;
+      color: #24384d;
+      font-size: 18px;
+    }
+
+    .hero-box li + li {
+      margin-top: 8px;
+    }
+
+    .stats {
+      margin-top: 22px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+    }
+
+    .stat {
+      background: rgba(255,255,255,.75);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px 16px;
+      box-shadow: 0 8px 20px rgba(15,42,68,.05);
+    }
+
+    .stat strong {
+      display: block;
+      font-size: 26px;
+      color: var(--brand);
+      margin-bottom: 4px;
+    }
+
+    .stat span {
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 14px;
+    }
+
+    main {
+      padding: 34px 0 56px;
+    }
+
+    .content {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 340px;
+      gap: 28px;
+      align-items: start;
+    }
+
+    .card {
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+      border-radius: var(--radius);
+      padding: 30px 32px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+    }
+
+    .card h2 {
+      margin: 0 0 20px;
+      color: var(--brand);
+      font-size: 32px;
+      line-height: 1.15;
+    }
+
+    .card h3 {
+      color: var(--brand);
+      font-size: 20px;
+      margin: 26px 0 10px;
+    }
+
+    .card p {
+      font-size: 18px;
+      color: #22364b;
+      margin: 0 0 18px;
+    }
+
+    .card ul, .card ol {
+      padding-left: 26px;
+      margin: 14px 0 0;
+    }
+
+    .card li {
+      font-size: 18px;
+      color: #22364b;
+      margin-bottom: 10px;
+    }
+
+    .highlight {
+      background: linear-gradient(180deg, #eef5ff 0%, #eaf2fd 100%);
+      border: 1px solid #d8e7ff;
+      border-left: 6px solid #2b66f6;
+      padding: 18px 18px 18px 20px;
+      border-radius: 16px;
+      margin: 22px 0;
+      color: #1a3655;
+      font-size: 18px;
+    }
+
+    .section-cta {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 12px;
+    }
+
+    .sidebar {
+      position: sticky;
+      top: 108px;
+    }
+
+    .sidebar-card {
+      background: linear-gradient(180deg, #ffffff 0%, #fbfcfe 100%);
+      border: 1px solid var(--line);
+      border-radius: 24px;
+      padding: 28px;
+      box-shadow: var(--shadow);
+      margin-bottom: 22px;
+    }
+
+    .sidebar-card h3 {
+      margin-top: 0;
+      color: var(--brand);
+      font-size: 20px;
+    }
+
+    .mini-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      margin-bottom: 18px;
+    }
+
+    .mini-list a {
+      text-decoration: none;
+      color: var(--brand);
+      font-size: 17px;
+      font-weight: 900;
+      padding: 10px 12px;
+      border-radius: 12px;
+      background: #f4f8fc;
+      border: 1px solid #e3ebf3;
+      transition: .2s ease;
+    }
+
+    .mini-list a:hover {
+      background: #ebf3fb;
+      transform: translateX(2px);
+    }
+
+    .tip-box {
+      background: #f4f9ff;
+      border: 1px dashed #b7cae2;
+      border-radius: 16px;
+      padding: 16px;
+      color: #29425a;
+      font-size: 16px;
+    }
+
+    .download-box {
+      background: linear-gradient(135deg, #0f2a44, #163d63);
+      color: #fff;
+    }
+
+    .download-box h3,
+    .download-box p {
+      color: #fff;
+    }
+
+    .download-box p {
+      opacity: .92;
+      font-size: 16px;
+      margin-bottom: 16px;
+    }
+
+    footer {
+      background: linear-gradient(180deg, #071a31 0%, #091f3c 100%);
+      color: #d8e5f3;
+      padding: 34px 0 40px;
+      margin-top: 20px;
+      border-top: 1px solid rgba(255,255,255,.06);
+    }
+
+    .footer-inner {
+      text-align: center;
+    }
+
+    .footer-logo {
+      height: 48px;
+      width: auto;
+      margin-bottom: 12px;
+    }
+
+    .footer-title {
+      font-size: 22px;
+      font-weight: 900;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-top: 18px;
+    }
+
+    .footer-links a {
+      color: #9fcbff;
+      text-decoration: none;
+      font-weight: 800;
+    }
+
+    @media (max-width: 1080px) {
+      h1 { font-size: 50px; }
+      .lead { font-size: 21px; }
+      .hero-grid,
+      .content {
+        grid-template-columns: 1fr;
+      }
+      .sidebar {
+        position: static;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .topbar {
+        justify-content: center;
+      }
+      .brand {
+        justify-content: center;
+        width: 100%;
+      }
+      .nav {
+        justify-content: center;
+        width: 100%;
+      }
+      h1 {
+        font-size: 38px;
+      }
+      .lead {
+        font-size: 19px;
+      }
+      .card,
+      .hero-box,
+      .sidebar-card {
+        padding: 24px 22px;
+      }
+      .stats {
+        grid-template-columns: 1fr;
+      }
+      .btn {
+        width: 100%;
+      }
+      .hero-actions,
+      .section-cta {
+        flex-direction: column;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="wrap topbar">
+      <a href="./index.html" class="brand">
+        <img src="./assets/logo-mestre-piso-horizontal.png" alt="Logo Mestre Piso">
+        <div class="brand-text">
+          <strong>Mestre Piso</strong>
+          <span>Calculadora profissional</span>
+        </div>
+      </a>
+
+      <nav class="nav">
+        <a href="./index.html">Início</a>
+        <a href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Calculadora</a>
+        <a href="./politica-de-privacidade.html">Privacidade</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <div class="badge">GUIA DE COMPRA E CÁLCULO</div>
+        <h1>Como calcular piso por metro quadrado com mais precisão</h1>
+        <p class="lead">
+          Saber como calcular piso por metro quadrado ajuda a comprar melhor, evitar desperdício e reduzir o risco de faltar material na obra. Com o método certo, você toma uma decisão mais segura antes de executar o serviço.
+        </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Abrir calculadora de piso</a>
+          <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share">Baixar app Mestre Piso</a>
+        </div>
+
+        <div class="stats">
+          <div class="stat">
+            <strong>+ controle</strong>
+            <span>na compra do material</span>
+          </div>
+          <div class="stat">
+            <strong>- erro</strong>
+            <span>na estimativa da obra</span>
+          </div>
+          <div class="stat">
+            <strong>+ economia</strong>
+            <span>com menos desperdício</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="hero-box">
+        <h3>Você vai aprender aqui</h3>
+        <ul>
+          <li>Como calcular a área do ambiente</li>
+          <li>Como estimar peças e caixas</li>
+          <li>Como considerar perdas</li>
+          <li>Erros comuns na compra do piso</li>
+          <li>Quando usar uma calculadora profissional</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <main>
+    <div class="wrap content">
+      <div>
+        <section class="card">
+          <h2>O primeiro passo: medir corretamente o ambiente</h2>
+          <p>
+            Antes de pensar em quantidade de peças, você precisa medir com precisão a largura e o comprimento do local. A conta básica da área é simples:
+          </p>
+          <div class="highlight">
+            Área do ambiente = largura x comprimento
+          </div>
+          <p>
+            Se um cômodo tem 3 metros de largura e 5 metros de comprimento, a área será de 15 m². Esse é o ponto de partida para calcular o piso, mas não deve ser o único dado considerado.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Como calcular quantas peças de piso serão necessárias</h2>
+          <p>
+            Depois de descobrir a área total, é preciso entender o tamanho da peça escolhida. Um piso de 60x60 cm, por exemplo, ocupa 0,36 m² por peça.
+          </p>
+          <p>
+            Para estimar a quantidade de peças, você divide a área do ambiente pela área da peça. Só que, na prática, a obra quase sempre envolve cortes, perdas e ajustes de paginação.
+          </p>
+          <p>
+            Por isso, calcular apenas no seco pode dar uma falsa sensação de segurança. O ideal é incluir uma margem de perda.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Como calcular caixas de piso</h2>
+          <p>
+            Muitas lojas vendem piso por caixa. Nesse caso, você precisa verificar o rendimento informado pelo fabricante, normalmente em metros quadrados por caixa.
+          </p>
+          <p>
+            Se cada caixa cobre 2,5 m² e o ambiente tem 15 m², a conta inicial seria:
+          </p>
+          <div class="highlight">
+            15 ÷ 2,5 = 6 caixas
+          </div>
+          <p>
+            Mas a compra final pode precisar de uma ou mais caixas extras dependendo do padrão de assentamento, dos recortes e da margem de segurança adotada.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Margem de perda: por que ela é importante?</h2>
+          <p>
+            Um dos erros mais comuns é comprar exatamente a metragem do ambiente. Isso aumenta o risco de faltar material quando houver recortes, quebras ou ajustes.
+          </p>
+          <ul>
+            <li>Paginação reta costuma exigir uma perda menor</li>
+            <li>Paginação diagonal normalmente aumenta a perda</li>
+            <li>Ambientes com muitos recortes pedem mais atenção</li>
+            <li>Obras com acabamento mais exigente precisam de melhor planejamento</li>
+          </ul>
+          <p>
+            É por isso que profissionais experientes evitam trabalhar apenas com a área bruta.
+          </p>
+        </section>
+
+        <section class="card">
+          <h2>Erros comuns ao calcular piso por m²</h2>
+          <ul>
+            <li>Medir o ambiente de forma errada</li>
+            <li>Ignorar a largura do rejunte</li>
+            <li>Comprar pela área sem pensar nos cortes</li>
+            <li>Não verificar o rendimento por caixa</li>
+            <li>Desconsiderar a paginação escolhida</li>
+            <li>Não prever margem de segurança</li>
+          </ul>
+        </section>
+
+        <section class="card">
+          <h2>Quando vale a pena usar uma calculadora profissional</h2>
+          <p>
+            Quando você quer mais precisão, mais velocidade e uma apresentação melhor para o cliente, usar uma calculadora profissional faz toda a diferença. Em vez de depender apenas de contas manuais, você ganha uma visão mais prática da compra e do planejamento.
+          </p>
+          <p>
+            Com o Mestre Piso, o profissional consegue estimar área, peças, caixas e ainda seguir para recursos mais avançados no app, como paginação e apresentação técnica.
+          </p>
+
+          <div class="section-cta">
+            <a class="btn btn-primary" href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Usar calculadora agora</a>
+          </div>
+        </section>
+
+        <section class="card">
+          <h2>Conclusão</h2>
+          <p>
+            Calcular piso por metro quadrado parece simples, mas para comprar bem e executar sem sustos é importante considerar área, tamanho da peça, rendimento por caixa e margem de perda.
+          </p>
+          <p>
+            Quanto melhor o cálculo, menor a chance de desperdício e maior a confiança na obra. Para quem busca mais precisão e praticidade, uma calculadora específica pode ajudar bastante.
+          </p>
+        </section>
+      </div>
+
+      <aside class="sidebar">
+        <div class="sidebar-card">
+          <h3>Links úteis</h3>
+          <div class="mini-list">
+            <a href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Calculadora de piso</a>
+            <a href="./paginacao-de-piso.html">Paginação de piso</a>
+            <a href="./piso-60x60-quantidade.html">Piso 60x60: quantos por m²?</a>
+            <a href="./calculadora-de-piso-diagonal.html">Calculadora de piso diagonal</a>
+          </div>
+
+          <div class="tip-box">
+            <strong>Dica:</strong> esta página ajuda a captar buscas de quem quer aprender a calcular piso e pode levar esse visitante para a sua calculadora principal.
+          </div>
+        </div>
+
+        <div class="sidebar-card download-box">
+          <h3>Baixe o app Mestre Piso</h3>
+          <p>
+            Use o aplicativo para trabalhar com mais rapidez, mais segurança e uma apresentação mais profissional na obra.
+          </p>
+          <a class="btn btn-primary" href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share">Baixar agora</a>
+        </div>
+      </aside>
+    </div>
+  </main>
+
+  <footer>
+    <div class="wrap footer-inner">
+      <img src="./assets/logo-mestre-piso-horizontal.png" alt="Logo Mestre Piso" class="footer-logo">
+      <div class="footer-title">Mestre Piso</div>
+      <div>Calculadora de piso e paginação profissional para sua obra.</div>
+
+      <div class="footer-links">
+        <a href="./index.html">Início</a>
+        <a href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Calculadora</a>
+        <a href="./politica-de-privacidade.html">Política de Privacidade</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
+

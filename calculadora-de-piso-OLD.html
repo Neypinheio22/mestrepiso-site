@@ -1,4 +1,4 @@
-<!doctype html>
+﻿<!doctype html>
 <html lang="pt-BR">
 <head>
   <meta charset="utf-8" />
@@ -625,9 +625,9 @@
           </p>
 
           <ul class="bullets">
-            <li><span class="check">✓</span><span>Cálculo real de área, peças e caixas</span></li>
-            <li><span class="check">✓</span><span>Prévia útil antes da compra do material</span></li>
-            <li><span class="check">✓</span><span>Paginação detalhada desbloqueada no aplicativo</span></li>
+            <li><span class="check">âœ“</span><span>Cálculo real de área, peças e caixas</span></li>
+            <li><span class="check">âœ“</span><span>Prévia útil antes da compra do material</span></li>
+            <li><span class="check">âœ“</span><span>Paginação detalhada desbloqueada no aplicativo</span></li>
           </ul>
 
           <div class="actions">
@@ -663,7 +663,7 @@
                     <option value="Sala / Cozinha">Sala / Cozinha</option>
                     <option value="Quarto">Quarto</option>
                     <option value="Banheiro">Banheiro</option>
-                    <option value="Área externa">Área externa</option>
+                    <option value="Ãrea externa">Ãrea externa</option>
                   </select>
                 </div>
 
@@ -688,7 +688,7 @@
                 </div>
 
                 <div class="field">
-                  <label for="caixaM2">Rendimento por caixa (m²)</label>
+                  <label for="caixaM2">Rendimento por caixa (mÂ²)</label>
                   <input id="caixaM2" class="real-input" type="number" min="0.01" step="0.01" placeholder="Ex: 2.82" value="2.82" />
                 </div>
               </div>
@@ -701,12 +701,12 @@
 
                 <div class="result-grid">
                   <div class="mini">
-                    <span>Área do ambiente</span>
-                    <strong id="resultadoArea">15,36 m²</strong>
+                    <span>Ãrea do ambiente</span>
+                    <strong id="resultadoArea">15,36 mÂ²</strong>
                   </div>
                   <div class="mini">
-                    <span>Área da peça</span>
-                    <strong id="resultadoPeca">0,71 m²</strong>
+                    <span>Ãrea da peça</span>
+                    <strong id="resultadoPeca">0,71 mÂ²</strong>
                   </div>
                   <div class="mini">
                     <span>Quantidade de peças</span>
@@ -731,7 +731,7 @@
 
                     <div class="lock-overlay">
                       <div class="lock-card">
-                        <div class="lock-icon">🔒</div>
+                        <div class="lock-icon">ðŸ”’</div>
                         <h3>Paginação detalhada bloqueada</h3>
                         <p>
                           Baixe o app Mestre Piso para ver cortes, paginação completa, diagonais e relatório em PDF.
@@ -762,25 +762,25 @@
 
       <div class="cards">
         <div class="card">
-          <div class="icon">🧮</div>
+          <div class="icon">ðŸ§®</div>
           <h3>Calcule o básico na hora</h3>
-          <p>Área, quantidade de peças e caixas calculadas rapidamente para ajudar na decisão inicial.</p>
+          <p>Ãrea, quantidade de peças e caixas calculadas rapidamente para ajudar na decisão inicial.</p>
         </div>
 
         <div class="card">
-          <div class="icon">📦</div>
+          <div class="icon">ðŸ“¦</div>
           <h3>Veja quantas caixas comprar</h3>
           <p>Reduza o risco de faltar ou sobrar material com um cálculo inicial mais direto.</p>
         </div>
 
         <div class="card">
-          <div class="icon">📐</div>
+          <div class="icon">ðŸ“</div>
           <h3>Libere a paginação no app</h3>
           <p>Tenha no celular uma visão profissional da distribuição das peças antes da execução.</p>
         </div>
 
         <div class="card">
-          <div class="icon">📄</div>
+          <div class="icon">ðŸ“„</div>
           <h3>Gere PDF e apresente ao cliente</h3>
           <p>Use o aplicativo para mostrar a solução com mais clareza e mais confiança na obra.</p>
         </div>
@@ -845,8 +845,8 @@
 
 <footer class="footer">
   <div class="container">
-    Mestre Piso • Calculadora de piso online •
-    <a href="https://www.mestrepiso.com.br/">Página principal</a> •
+    Mestre Piso â€¢ Calculadora de piso online â€¢
+    <a href="https://www.mestrepiso.com.br/">Página principal</a> â€¢
     <a href="politica-de-privacidade.html">Política de Privacidade</a>
   </div>
 </footer>
@@ -885,8 +885,8 @@
     const quantidadePecas = Math.ceil(areaAmbiente / areaPeca);
     const quantidadeCaixas = Math.ceil(areaAmbiente / caixaM2);
 
-    document.getElementById('resultadoArea').textContent = formatarNumeroBr(areaAmbiente) + ' m²';
-    document.getElementById('resultadoPeca').textContent = formatarNumeroBr(areaPeca) + ' m²';
+    document.getElementById('resultadoArea').textContent = formatarNumeroBr(areaAmbiente) + ' mÂ²';
+    document.getElementById('resultadoPeca').textContent = formatarNumeroBr(areaPeca) + ' mÂ²';
     document.getElementById('resultadoPecas').textContent = quantidadePecas + ' peças';
     document.getElementById('resultadoCaixas').textContent = quantidadeCaixas + ' caixas';
   }
@@ -902,3 +902,4 @@
 
 </body>
 </html>
+
