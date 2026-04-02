@@ -1,0 +1,816 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Aplicativo para Calcular Piso: Faça Paginação e Evite Desperdício | Mestre Piso</title>
+  <meta
+    name="description"
+    content="Descubra o melhor aplicativo para calcular piso, fazer paginação e evitar desperdício na obra. Baixe o Mestre Piso e calcule com precisão."
+  />
+  <meta
+    name="keywords"
+    content="aplicativo para calcular piso, app para calcular piso, calculadora de piso online, paginação de piso, cálculo de piso por m2, aplicativo de piso"
+  />
+  <meta name="robots" content="index, follow" />
+  <meta name="author" content="Mestre Piso" />
+  <link rel="canonical" href="https://www.mestrepiso.com.br/aplicativo-para-calcular-piso.html" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Aplicativo para Calcular Piso: Faça Paginação e Evite Desperdício" />
+  <meta
+    property="og:description"
+    content="Conheça o Mestre Piso, aplicativo para calcular piso, paginação e material com mais precisão na obra."
+  />
+  <meta property="og:url" content="https://www.mestrepiso.com.br/aplicativo-para-calcular-piso.html" />
+  <meta property="og:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Aplicativo para Calcular Piso: Faça Paginação e Evite Desperdício" />
+  <meta
+    name="twitter:description"
+    content="Veja como usar um aplicativo para calcular piso, evitar desperdício e planejar melhor sua obra."
+  />
+  <meta name="twitter:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg" />
+
+  <style>
+    :root{
+      --bg:#07111f;
+      --bg-soft:#0d1b2d;
+      --card:#10233d;
+      --text:#eef4ff;
+      --muted:#b8c7e0;
+      --line:rgba(255,255,255,.10);
+      --green:#27c07d;
+      --green-2:#1aa56a;
+      --blue:#4da3ff;
+      --gold:#ffd76a;
+      --shadow:0 18px 50px rgba(0,0,0,.28);
+      --radius:22px;
+      --max:1180px;
+    }
+
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{
+      margin:0;
+      font-family:Arial, Helvetica, sans-serif;
+      background:
+        radial-gradient(circle at top left, rgba(77,163,255,.14), transparent 30%),
+        radial-gradient(circle at top right, rgba(39,192,125,.10), transparent 26%),
+        linear-gradient(180deg, #06101d 0%, #091526 100%);
+      color:var(--text);
+      line-height:1.65;
+    }
+
+    a{color:inherit;text-decoration:none}
+    img{max-width:100%;display:block}
+
+    .container{
+      width:min(calc(100% - 32px), var(--max));
+      margin:0 auto;
+    }
+
+    .topbar{
+      position:sticky;
+      top:0;
+      z-index:50;
+      backdrop-filter:blur(14px);
+      background:rgba(6,16,29,.75);
+      border-bottom:1px solid rgba(255,255,255,.08);
+    }
+
+    .nav{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+      gap:18px;
+      min-height:78px;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap:12px;
+      font-weight:700;
+      font-size:1.05rem;
+      flex-shrink:0;
+    }
+
+    .brand img{
+      height:36px;
+      width:auto;
+      max-width:none;
+      object-fit:contain;
+      display:block;
+    }
+
+    .nav-links{
+      display:flex;
+      gap:20px;
+      flex-wrap:wrap;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .nav-links a:hover{color:#fff}
+
+    .cta-top{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:12px 18px;
+      border-radius:14px;
+      background:linear-gradient(135deg, var(--green), var(--green-2));
+      color:#fff;
+      font-weight:700;
+      box-shadow:var(--shadow);
+      white-space:nowrap;
+    }
+
+    .hero{
+      padding:72px 0 34px;
+    }
+
+    .hero-grid{
+      display:grid;
+      grid-template-columns:1.08fr .92fr;
+      gap:28px;
+      align-items:center;
+    }
+
+    .hero-card,
+    .card{
+      background:linear-gradient(180deg, rgba(18,40,68,.95), rgba(13,27,45,.98));
+      border:1px solid var(--line);
+      border-radius:var(--radius);
+      box-shadow:var(--shadow);
+    }
+
+    .hero-card{
+      padding:34px;
+    }
+
+    .eyebrow{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      font-size:.88rem;
+      font-weight:700;
+      color:#cbe8ff;
+      background:rgba(77,163,255,.10);
+      border:1px solid rgba(77,163,255,.20);
+      border-radius:999px;
+      padding:10px 14px;
+      margin-bottom:16px;
+    }
+
+    h1{
+      font-size:clamp(2rem, 4vw, 3.5rem);
+      line-height:1.08;
+      margin:0 0 16px;
+      letter-spacing:-.03em;
+    }
+
+    .hero p{
+      margin:0;
+      color:var(--muted);
+      font-size:1.06rem;
+    }
+
+    .hero-actions{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:28px;
+    }
+
+    .btn-primary,
+    .btn-secondary{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      padding:14px 20px;
+      border-radius:14px;
+      font-weight:700;
+      transition:.2s ease;
+      text-align:center;
+    }
+
+    .btn-primary{
+      background:linear-gradient(135deg, var(--green), var(--green-2));
+      color:#fff;
+      box-shadow:var(--shadow);
+    }
+
+    .btn-secondary{
+      border:1px solid rgba(255,255,255,.14);
+      color:#fff;
+      background:rgba(255,255,255,.03);
+    }
+
+    .btn-primary:hover,
+    .btn-secondary:hover{
+      transform:translateY(-2px);
+    }
+
+    .hero-side{
+      padding:0;
+      overflow:hidden;
+      position:relative;
+    }
+
+    .hero-side img{
+      width:100%;
+      height:100%;
+      min-height:520px;
+      object-fit:cover;
+    }
+
+    .image-badge{
+      position:absolute;
+      left:20px;
+      bottom:20px;
+      background:rgba(7,17,31,.72);
+      border:1px solid rgba(255,255,255,.12);
+      color:#fff;
+      padding:14px 16px;
+      border-radius:16px;
+      backdrop-filter:blur(10px);
+      max-width:320px;
+      box-shadow:var(--shadow);
+    }
+
+    .image-badge strong{
+      display:block;
+      margin-bottom:6px;
+      font-size:1rem;
+    }
+
+    .section{
+      padding:28px 0;
+    }
+
+    .section-title{
+      margin:0 0 18px;
+      font-size:clamp(1.55rem, 2.5vw, 2.3rem);
+      line-height:1.15;
+      letter-spacing:-.02em;
+    }
+
+    .section-sub{
+      color:var(--muted);
+      margin:0 0 24px;
+      max-width:820px;
+    }
+
+    .grid-2{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+    }
+
+    .grid-3{
+      display:grid;
+      grid-template-columns:repeat(3, 1fr);
+      gap:22px;
+    }
+
+    .card{
+      padding:26px;
+    }
+
+    .card h2,
+    .card h3{
+      margin-top:0;
+      line-height:1.2;
+    }
+
+    .card p{
+      color:var(--muted);
+    }
+
+    .mini-list{
+      display:grid;
+      gap:12px;
+      padding-left:18px;
+      color:var(--muted);
+    }
+
+    .mini-list li strong{
+      color:#fff;
+    }
+
+    .highlight{
+      color:#fff;
+      font-weight:700;
+    }
+
+    .image-section{
+      display:grid;
+      grid-template-columns:1fr 1fr;
+      gap:22px;
+      align-items:center;
+    }
+
+    .image-card{
+      overflow:hidden;
+      padding:0;
+    }
+
+    .image-card img{
+      width:100%;
+      height:100%;
+      min-height:420px;
+      object-fit:cover;
+    }
+
+    .cta-final{
+      padding:18px 0 80px;
+    }
+
+    .cta-box{
+      padding:34px;
+      text-align:center;
+      background:
+        radial-gradient(circle at top, rgba(77,163,255,.14), transparent 34%),
+        linear-gradient(180deg, rgba(18,40,68,.98), rgba(13,27,45,.98));
+      border:1px solid var(--line);
+      border-radius:28px;
+      box-shadow:var(--shadow);
+    }
+
+    .cta-box p{
+      max-width:780px;
+      margin:0 auto 24px;
+      color:var(--muted);
+    }
+
+    .faq{
+      display:grid;
+      gap:14px;
+    }
+
+    details{
+      border-radius:18px;
+      background:linear-gradient(180deg, rgba(18,40,68,.95), rgba(13,27,45,.98));
+      border:1px solid var(--line);
+      padding:18px 20px;
+    }
+
+    summary{
+      cursor:pointer;
+      font-weight:700;
+      list-style:none;
+    }
+
+    summary::-webkit-details-marker{display:none}
+    details p{
+      margin:14px 0 0;
+      color:var(--muted);
+    }
+
+    footer{
+      border-top:1px solid rgba(255,255,255,.08);
+      padding:28px 0 42px;
+      color:var(--muted);
+      font-size:.95rem;
+    }
+
+    .footer-grid{
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:space-between;
+      gap:16px;
+    }
+
+    @media (max-width: 980px){
+      .hero-grid,
+      .grid-2,
+      .grid-3,
+      .image-section{
+        grid-template-columns:1fr;
+      }
+
+      .nav{
+        flex-wrap:wrap;
+        padding:14px 0;
+      }
+
+      .nav-links{
+        width:100%;
+      }
+
+      .hero{
+        padding-top:44px;
+      }
+
+      .hero-side img,
+      .image-card img{
+        min-height:360px;
+      }
+    }
+
+    @media (max-width: 640px){
+      .hero-card,
+      .card,
+      .cta-box{
+        padding:22px;
+      }
+
+      .hero-side{
+        border-radius:var(--radius);
+      }
+
+      h1{
+        font-size:2.1rem;
+      }
+
+      .hero-actions{
+        flex-direction:column;
+      }
+
+      .btn-primary,
+      .btn-secondary,
+      .cta-top{
+        width:100%;
+      }
+
+      .brand img{
+        height:32px;
+      }
+
+      .image-badge{
+        left:14px;
+        right:14px;
+        max-width:none;
+      }
+    }
+  </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Aplicativo para Calcular Piso",
+    "url":"https://www.mestrepiso.com.br/aplicativo-para-calcular-piso.html",
+    "description":"Página sobre aplicativo para calcular piso, paginação e quantidade de material na obra.",
+    "publisher":{
+      "@type":"Organization",
+      "name":"Mestre Piso",
+      "url":"https://www.mestrepiso.com.br/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Qual o melhor aplicativo para calcular piso?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"O melhor aplicativo para calcular piso é aquele que ajuda a medir área, estimar quantidade de peças, visualizar paginação e evitar desperdício na obra."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Aplicativo para calcular piso ajuda a evitar desperdício?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Sim. Um aplicativo para calcular piso ajuda a comprar material com mais precisão, reduzindo sobra, falta de peças e retrabalho na execução."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"É possível calcular argamassa em um app de piso?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Sim. Alguns aplicativos mais completos também ajudam no cálculo de argamassa, além da quantidade de piso e da paginação do ambiente."
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <header class="topbar">
+    <div class="container nav">
+      <a href="./index.html" class="brand" aria-label="Mestre Piso">
+        <img src="./assets/logo-mestre-piso-horizontal.png" alt="Mestre Piso" />
+      </a>
+
+      <nav class="nav-links" aria-label="Navegação principal">
+        <a href="./index.html">Início</a>
+        <a href="#beneficios">Benefícios</a>
+        <a href="#mestre-piso">Mestre Piso</a>
+        <a href="#faq">Perguntas frequentes</a>
+      </nav>
+
+      <a
+        class="cta-top"
+        href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share"
+        target="_blank"
+        rel="noopener noreferrer"
+      >
+        Baixar o app
+      </a>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-card">
+          <div class="eyebrow">Aplicativo de obra • Cálculo profissional</div>
+          <h1>Aplicativo para Calcular Piso: Faça Paginação e Evite Desperdício</h1>
+          <p>
+            Se você está procurando um <strong>aplicativo para calcular piso</strong>, hoje já é possível
+            fazer cálculos completos diretamente pelo celular, com mais precisão, rapidez e segurança
+            na obra.
+          </p>
+          <p style="margin-top:14px;">
+            O uso de um app de cálculo de piso ajuda a evitar erros comuns, reduz desperdício de material
+            e facilita o planejamento do serviço do início ao fim.
+          </p>
+
+          <div class="hero-actions">
+            <a
+              class="btn-primary"
+              href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Baixar aplicativo para calcular piso
+            </a>
+            <a class="btn-secondary" href="./calculadora-de-piso.html">Ver calculadora de piso</a>
+          </div>
+        </div>
+
+        <aside class="hero-card hero-side">
+          <img src="./assets/print-app-calcule.png" alt="Aplicativo Mestre Piso ajudando a calcular piso na obra" />
+          <div class="image-badge">
+            <strong>Calcule sem erro na obra</strong>
+            <span>Mais precisão para piso, paginação e material sem depender de cálculo manual.</span>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="beneficios">
+      <div class="container">
+        <h2 class="section-title">Por que usar um aplicativo para calcular piso?</h2>
+        <p class="section-sub">
+          Calcular piso manualmente pode gerar erros que custam caro. Um pequeno erro na metragem
+          pode resultar em falta ou sobra de material, atraso no serviço e retrabalho.
+        </p>
+
+        <div class="grid-3">
+          <article class="card">
+            <h3>Cálculo mais rápido</h3>
+            <p>
+              Em vez de perder tempo com contas manuais, você consegue medir e calcular em poucos passos.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Menos erro</h3>
+            <p>
+              Um aplicativo ajuda a reduzir falhas no cálculo e melhora a tomada de decisão na compra do material.
+            </p>
+          </article>
+
+          <article class="card">
+            <h3>Mais controle</h3>
+            <p>
+              Você passa a enxergar melhor o serviço, a paginação e o consumo do ambiente antes da execução.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container image-section">
+        <div class="card image-card">
+          <img src="./assets/print-app-quantocomprar.png" alt="App Mestre Piso ajudando a saber exatamente quanto comprar" />
+        </div>
+
+        <div class="card">
+          <h2>Saiba exatamente quanto comprar</h2>
+          <p>
+            O app não ajuda só na obra. Ele também melhora sua decisão antes da compra, permitindo
+            calcular com mais segurança e evitar desperdício.
+          </p>
+          <ul class="mini-list">
+            <li><strong>Saiba quanto comprar</strong> antes de fechar o pedido.</li>
+            <li><strong>Evite desperdício</strong> de piso e argamassa.</li>
+            <li><strong>Tenha mais confiança</strong> ao falar com o cliente ou com a loja.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <div class="card">
+          <h2>O que um bom app de piso precisa fazer</h2>
+          <ul class="mini-list">
+            <li><strong>Calcular área em m²</strong> com praticidade.</li>
+            <li><strong>Estimar quantidade de piso</strong> com mais precisão.</li>
+            <li><strong>Mostrar paginação</strong> para reduzir erro visual e técnico.</li>
+            <li><strong>Ajudar no cálculo de argamassa</strong> e planejamento da execução.</li>
+            <li><strong>Organizar orçamento</strong> e apresentação do serviço.</li>
+          </ul>
+        </div>
+
+        <div class="card">
+          <h2>Evite prejuízo na obra</h2>
+          <p>
+            Um erro no cálculo pode gerar compra excessiva de material, falta de peças no meio da obra,
+            retrabalho e perda de tempo.
+          </p>
+          <p>
+            Com um <strong>aplicativo para calcular piso</strong>, você reduz esses riscos e trabalha
+            com muito mais segurança.
+          </p>
+          <p>
+            <span class="highlight">Em resumo:</span> menos improviso, menos desperdício e mais lucro.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="mestre-piso">
+      <div class="container">
+        <div class="card">
+          <h2 class="section-title" style="margin-bottom:12px;">O Mestre Piso é o aplicativo ideal para calcular piso</h2>
+          <p class="section-sub" style="margin-bottom:0;">
+            O <strong>Mestre Piso</strong> é um aplicativo desenvolvido para profissionais da construção
+            que precisam de agilidade, precisão e organização no dia a dia.
+          </p>
+
+          <div class="grid-3" style="margin-top:22px;">
+            <div class="card" style="padding:22px;">
+              <h3>Calcule em segundos</h3>
+              <p>Faça cálculos de piso de forma simples e rápida direto no celular.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <h3>Visualize a paginação</h3>
+              <p>Veja a distribuição do piso antes da execução e reduza erro na obra.</p>
+            </div>
+            <div class="card" style="padding:22px;">
+              <h3>Trabalhe com mais confiança</h3>
+              <p>Apresente um serviço mais organizado e profissional para o cliente.</p>
+            </div>
+          </div>
+
+          <p style="margin-top:18px;">
+            Além disso, o app também conversa com buscas como <strong>calculadora de piso online</strong>,
+            <strong>app para calcular piso</strong>, <strong>paginação de piso profissional</strong> e
+            <strong>cálculo de piso por m²</strong>.
+          </p>
+
+          <div class="hero-actions" style="margin-top:22px;">
+            <a
+              class="btn-primary"
+              href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Baixar agora na Play Store
+            </a>
+            <a class="btn-secondary" href="./quanto-de-argamassa-por-m2.html">
+              Ver página de argamassa
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container image-section">
+        <div class="card">
+          <h2>Ferramenta essencial para a obra</h2>
+          <p>
+            O aplicativo pode ser usado por profissionais que já têm experiência e também por quem quer
+            trabalhar com mais organização e menos erro no dia a dia.
+          </p>
+          <p>
+            Isso facilita a rotina da obra, melhora a comunicação da equipe e ajuda a entregar um serviço
+            mais profissional.
+          </p>
+        </div>
+
+        <div class="card image-card">
+          <img src="./assets/print-app-essencial.png" alt="Profissional usando o app Mestre Piso em ambiente de obra moderno" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container grid-2">
+        <article class="card">
+          <h2>Aplicativo para calcular piso serve para quem?</h2>
+          <p>
+            Serve para pedreiros, ajudantes, mestres de obra, construtores, arquitetos e qualquer pessoa
+            que queira calcular piso com mais segurança.
+          </p>
+          <p>
+            Mesmo quem não trabalha diariamente com cálculo pode usar um app para evitar erro e fazer
+            uma compra mais acertada.
+          </p>
+        </article>
+
+        <article class="card">
+          <h2>Aplicativo não é mais diferencial. É necessidade.</h2>
+          <p>
+            Quem ainda calcula tudo manualmente corre mais risco de erro, perde tempo e transmite menos confiança.
+          </p>
+          <p>
+            Hoje, usar um aplicativo para calcular piso é uma forma inteligente de trabalhar melhor e
+            entregar mais qualidade.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="faq">
+      <div class="container">
+        <h2 class="section-title">Perguntas frequentes sobre aplicativo para calcular piso</h2>
+
+        <div class="faq">
+          <details open>
+            <summary>Qual o melhor aplicativo para calcular piso?</summary>
+            <p>
+              O melhor aplicativo para calcular piso é aquele que ajuda a medir área, estimar quantidade
+              de peças, visualizar paginação e evitar desperdício na obra.
+            </p>
+          </details>
+
+          <details>
+            <summary>Aplicativo para calcular piso ajuda a evitar desperdício?</summary>
+            <p>
+              Sim. Um aplicativo para calcular piso ajuda a comprar material com mais precisão,
+              reduzindo sobra, falta de peças e retrabalho na execução.
+            </p>
+          </details>
+
+          <details>
+            <summary>É possível calcular argamassa em um app de piso?</summary>
+            <p>
+              Sim. Alguns aplicativos mais completos também ajudam no cálculo de argamassa, além da
+              quantidade de piso e da paginação do ambiente.
+            </p>
+          </details>
+
+          <details>
+            <summary>Vale a pena usar app para calcular piso na obra?</summary>
+            <p>
+              Vale muito. O app economiza tempo, reduz erro e ajuda o profissional a trabalhar com
+              mais organização e segurança.
+            </p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta-final">
+      <div class="container">
+        <div class="cta-box">
+          <h2 class="section-title">Quer calcular piso com mais precisão e menos desperdício?</h2>
+          <p>
+            Baixe o Mestre Piso e leve mais praticidade, mais organização e mais profissionalismo
+            para a sua obra.
+          </p>
+
+          <div class="hero-actions" style="justify-content:center;">
+            <a
+              class="btn-primary"
+              href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Baixar aplicativo para calcular piso
+            </a>
+            <a class="btn-secondary" href="./index.html">Voltar para o site</a>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-grid">
+      <div>© 2026 Mestre Piso. Todos os direitos reservados.</div>
+      <div>
+        <a href="./index.html">Página inicial</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
