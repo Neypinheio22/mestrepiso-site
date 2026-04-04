@@ -1,16 +1,25 @@
 ﻿<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Como calcular piso por metro quadrado | Mestre Piso</title>
-  <meta name="description" content="Aprenda como calcular piso por metro quadrado, estimar peças, caixas e evitar desperdício na obra com mais precisão.">
-  <link rel="canonical" href="https://www.mestrepiso.com.br/calcular-piso-por-metro-quadrado.html">
-  <meta property="og:title" content="Como calcular piso por metro quadrado | Mestre Piso">
-  <meta property="og:description" content="Entenda como calcular piso por m², evitar erros na compra e usar uma calculadora profissional para sua obra.">
-  <meta property="og:type" content="website">
-  <meta property="og:url" content="https://www.mestrepiso.com.br/calcular-piso-por-metro-quadrado.html">
-  <meta property="og:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg">
+  <meta name="description" content="Aprenda como calcular piso por metro quadrado, estimar peças, caixas e evitar desperdício na obra com mais precisão usando a calculadora de piso Mestre Piso." />
+  <meta name="keywords" content="como calcular piso por metro quadrado, calcular piso por m2, calculadora de piso, quantidade de piso, caixas de piso, paginação de piso" />
+  <meta name="robots" content="index, follow" />
+  <link rel="canonical" href="https://www.mestrepiso.com.br/calcular-piso-por-metro-quadrado.html" />
+
+  <meta property="og:title" content="Como calcular piso por metro quadrado | Mestre Piso" />
+  <meta property="og:description" content="Entenda como calcular piso por m², evitar erros na compra e usar uma calculadora profissional para sua obra." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.mestrepiso.com.br/calcular-piso-por-metro-quadrado.html" />
+  <meta property="og:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Como calcular piso por metro quadrado | Mestre Piso" />
+  <meta name="twitter:description" content="Aprenda como calcular piso por m², estimar caixas e evitar desperdício usando a calculadora de piso do Mestre Piso." />
+  <meta name="twitter:image" content="https://www.mestrepiso.com.br/assets/og-image.jpg" />
+
   <style>
     * { box-sizing: border-box; }
 
@@ -24,13 +33,12 @@
       --accent:#17a34a;
       --accent-dark:#12803a;
       --line:#dce5ee;
-      --shadow:0 14px 40px rgba(9, 30, 66, .10);
-      --radius:22px;
+      --shadow:0 18px 45px rgba(9, 30, 66, .12);
+      --shadow-soft:0 10px 28px rgba(9, 30, 66, .08);
+      --radius:24px;
     }
 
-    html{
-      scroll-behavior:smooth;
-    }
+    html { scroll-behavior:smooth; }
 
     body {
       margin: 0;
@@ -38,6 +46,11 @@
       background: radial-gradient(circle at top left, #f7fbff 0%, #eef3f8 45%, #e9eff6 100%);
       color: var(--text);
       line-height: 1.7;
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
     }
 
     .wrap {
@@ -123,14 +136,14 @@
     }
 
     .hero {
-      padding: 52px 0 34px;
+      padding: 56px 0 32px;
       border-bottom: 1px solid var(--line);
     }
 
     .hero-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1.15fr) 380px;
-      gap: 28px;
+      grid-template-columns: minmax(0, 1.1fr) minmax(320px, 430px);
+      gap: 30px;
       align-items: center;
     }
 
@@ -147,10 +160,10 @@
     }
 
     h1 {
-      margin: 0 0 16px;
+      margin: 0 0 18px;
       font-size: 60px;
-      line-height: 1.05;
-      letter-spacing: -1.5px;
+      line-height: 1.03;
+      letter-spacing: -1.6px;
       color: #0d2035;
       max-width: 760px;
     }
@@ -159,15 +172,33 @@
       font-size: 24px;
       line-height: 1.5;
       color: #314356;
-      margin: 0 0 26px;
+      margin: 0 0 24px;
       max-width: 820px;
+    }
+
+    .hero-points {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 0 0 24px;
+    }
+
+    .hero-points span {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 10px 14px;
+      font-size: 14px;
+      font-weight: 800;
+      color: var(--brand);
+      box-shadow: var(--shadow-soft);
     }
 
     .hero-actions {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 16px;
+      margin-top: 14px;
     }
 
     .btn {
@@ -205,62 +236,100 @@
       background: #f7fbff;
     }
 
-    .hero-box {
+    .hero-visual {
       background: linear-gradient(180deg, #ffffff 0%, #f9fbfe 100%);
       border: 1px solid var(--line);
-      border-radius: 24px;
-      padding: 28px;
+      border-radius: 28px;
+      padding: 18px;
       box-shadow: var(--shadow);
+      position: relative;
+      overflow: hidden;
     }
 
-    .hero-box h3 {
-      margin-top: 0;
-      margin-bottom: 16px;
-      font-size: 22px;
+    .hero-visual::before {
+      content: "";
+      position: absolute;
+      inset: -50px -50px auto auto;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(43,102,246,.14) 0%, rgba(43,102,246,0) 70%);
+      pointer-events: none;
+    }
+
+    .hero-visual::after {
+      content: "";
+      position: absolute;
+      inset: auto auto -60px -60px;
+      width: 180px;
+      height: 180px;
+      background: radial-gradient(circle, rgba(23,163,74,.18) 0%, rgba(23,163,74,0) 70%);
+      pointer-events: none;
+    }
+
+    .hero-visual img {
+      width: 100%;
+      display: block;
+      border-radius: 20px;
+      object-fit: cover;
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-caption {
+      position: relative;
+      z-index: 1;
+      margin-top: 14px;
+      background: #f4f8fc;
+      border: 1px solid #e3ebf3;
+      border-radius: 18px;
+      padding: 16px;
+    }
+
+    .hero-caption h3 {
+      margin: 0 0 8px;
+      font-size: 20px;
       color: var(--brand);
     }
 
-    .hero-box ul {
+    .hero-caption p {
       margin: 0;
-      padding-left: 22px;
-      color: #24384d;
-      font-size: 18px;
+      font-size: 16px;
+      color: #304559;
     }
 
-    .hero-box li + li {
-      margin-top: 8px;
+    .benefit-strip {
+      padding: 18px 0 10px;
     }
 
-    .stats {
-      margin-top: 22px;
+    .benefit-grid {
       display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      grid-template-columns: repeat(4, 1fr);
       gap: 14px;
     }
 
-    .stat {
-      background: rgba(255,255,255,.75);
+    .benefit-card {
+      background: #fff;
       border: 1px solid var(--line);
       border-radius: 18px;
       padding: 18px 16px;
-      box-shadow: 0 8px 20px rgba(15,42,68,.05);
+      box-shadow: var(--shadow-soft);
     }
 
-    .stat strong {
+    .benefit-card strong {
       display: block;
-      font-size: 26px;
+      font-size: 18px;
       color: var(--brand);
-      margin-bottom: 4px;
+      margin-bottom: 6px;
     }
 
-    .stat span {
+    .benefit-card span {
+      font-size: 14px;
       color: var(--muted);
       font-weight: 700;
-      font-size: 14px;
     }
 
     main {
-      padding: 34px 0 56px;
+      padding: 28px 0 56px;
     }
 
     .content {
@@ -280,7 +349,7 @@
     }
 
     .card h2 {
-      margin: 0 0 20px;
+      margin: 0 0 18px;
       color: var(--brand);
       font-size: 32px;
       line-height: 1.15;
@@ -289,7 +358,7 @@
     .card h3 {
       color: var(--brand);
       font-size: 20px;
-      margin: 26px 0 10px;
+      margin: 24px 0 10px;
     }
 
     .card p {
@@ -320,11 +389,122 @@
       font-size: 18px;
     }
 
+    .highlight-green {
+      background: linear-gradient(180deg, #ebfaef 0%, #e5f7ea 100%);
+      border: 1px solid #ccefd7;
+      border-left: 6px solid var(--accent);
+      padding: 18px 18px 18px 20px;
+      border-radius: 16px;
+      margin: 22px 0;
+      color: #20472f;
+      font-size: 18px;
+    }
+
+    .content-image {
+      width: 100%;
+      border-radius: 18px;
+      margin: 20px 0 8px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      display: block;
+    }
+
+    .image-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+      margin: 22px 0 12px;
+    }
+
+    .image-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 12px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .image-card img {
+      width: 100%;
+      display: block;
+      border-radius: 14px;
+    }
+
+    .image-card span {
+      display: block;
+      margin-top: 10px;
+      font-size: 14px;
+      font-weight: 700;
+      color: var(--muted);
+    }
+
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 18px;
+    }
+
+    .step {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 18px;
+      box-shadow: var(--shadow-soft);
+    }
+
+    .step .num {
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: var(--brand);
+      color: #fff;
+      font-weight: 900;
+      margin-bottom: 12px;
+    }
+
+    .step strong {
+      display: block;
+      font-size: 18px;
+      color: var(--brand);
+      margin-bottom: 8px;
+    }
+
+    .step p {
+      font-size: 16px;
+      margin: 0;
+      color: #31485c;
+    }
+
     .section-cta {
       display: flex;
       gap: 14px;
       flex-wrap: wrap;
-      margin-top: 12px;
+      margin-top: 14px;
+    }
+
+    .cta-banner {
+      background: linear-gradient(135deg, #0f2a44, #163d63);
+      border-radius: 26px;
+      padding: 28px;
+      color: #fff;
+      box-shadow: var(--shadow);
+      margin-bottom: 24px;
+      border: 1px solid rgba(255,255,255,.08);
+    }
+
+    .cta-banner h2,
+    .cta-banner p {
+      color: #fff;
+      margin-top: 0;
+    }
+
+    .cta-banner p {
+      font-size: 18px;
+      opacity: .95;
     }
 
     .sidebar {
@@ -378,6 +558,15 @@
       padding: 16px;
       color: #29425a;
       font-size: 16px;
+    }
+
+    .sidebar-image {
+      width: 100%;
+      display: block;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+      box-shadow: var(--shadow-soft);
+      margin-bottom: 14px;
     }
 
     .download-box {
@@ -436,10 +625,12 @@
     }
 
     @media (max-width: 1080px) {
-      h1 { font-size: 50px; }
+      h1 { font-size: 48px; }
       .lead { font-size: 21px; }
       .hero-grid,
-      .content {
+      .content,
+      .benefit-grid,
+      .steps {
         grid-template-columns: 1fr;
       }
       .sidebar {
@@ -460,18 +651,16 @@
         width: 100%;
       }
       h1 {
-        font-size: 38px;
+        font-size: 36px;
       }
       .lead {
-        font-size: 19px;
+        font-size: 18px;
       }
       .card,
-      .hero-box,
-      .sidebar-card {
+      .hero-visual,
+      .sidebar-card,
+      .cta-banner {
         padding: 24px 22px;
-      }
-      .stats {
-        grid-template-columns: 1fr;
       }
       .btn {
         width: 100%;
@@ -480,17 +669,72 @@
       .section-cta {
         flex-direction: column;
       }
+      .image-row {
+        grid-template-columns: 1fr;
+      }
+      .hero-points {
+        flex-direction: column;
+        align-items: flex-start;
+      }
     }
   </style>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"WebPage",
+    "name":"Como calcular piso por metro quadrado",
+    "url":"https://www.mestrepiso.com.br/calcular-piso-por-metro-quadrado.html",
+    "description":"Guia para calcular piso por metro quadrado, estimar peças, caixas e evitar desperdício na obra.",
+    "publisher":{
+      "@type":"Organization",
+      "name":"Mestre Piso",
+      "url":"https://www.mestrepiso.com.br/"
+    }
+  }
+  </script>
+
+  <script type="application/ld+json">
+  {
+    "@context":"https://schema.org",
+    "@type":"FAQPage",
+    "mainEntity":[
+      {
+        "@type":"Question",
+        "name":"Como calcular piso por metro quadrado?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Para calcular piso por metro quadrado, multiplique a largura pelo comprimento do ambiente para descobrir a área em m². Depois, considere o tamanho da peça, o rendimento por caixa e uma margem de perda."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Como calcular quantas caixas de piso comprar?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Divida a área total do ambiente pelo rendimento informado na caixa do piso. Depois, acrescente uma margem de segurança para cortes e perdas."
+        }
+      },
+      {
+        "@type":"Question",
+        "name":"Preciso considerar perda ao calcular piso?",
+        "acceptedAnswer":{
+          "@type":"Answer",
+          "text":"Sim. Considerar perda é importante porque recortes, paginação e ajustes aumentam o consumo real na obra."
+        }
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header>
     <div class="wrap topbar">
       <a href="./index.html" class="brand">
-        <img src="./assets/logo-mestre-piso-horizontal.png" alt="Logo Mestre Piso">
+        <img src="./assets/logo-mestre-piso-horizontal.png" alt="Logo Mestre Piso" />
         <div class="brand-text">
           <strong>Mestre Piso</strong>
-          <span>Calculadora profissional</span>
+          <span>CALCULADORA PROFISSIONAL</span>
         </div>
       </a>
 
@@ -505,42 +749,58 @@
   <section class="hero">
     <div class="wrap hero-grid">
       <div>
-        <div class="badge">GUIA DE COMPRA E CÁLCULO</div>
-        <h1>Como calcular piso por metro quadrado com mais precisão</h1>
+        <div class="badge">GUIA PRÁTICO PARA OBRA E COMPRA DE MATERIAL</div>
+        <h1>Como calcular piso por metro quadrado sem errar na compra</h1>
         <p class="lead">
-          Saber como calcular piso por metro quadrado ajuda a comprar melhor, evitar desperdício e reduzir o risco de faltar material na obra. Com o método certo, você toma uma decisão mais segura antes de executar o serviço.
+          Aprenda a calcular área, estimar peças, conferir caixas e reduzir desperdício na obra com um método mais seguro. Quanto melhor o cálculo, maior a economia e menor a chance de faltar material.
         </p>
+
+        <div class="hero-points">
+          <span>Mais precisão</span>
+          <span>Menos desperdício</span>
+          <span>Mais segurança na compra</span>
+          <span>Melhor planejamento da obra</span>
+        </div>
+
+        <div class="highlight">
+          <strong>Resposta rápida:</strong> para calcular piso por metro quadrado, multiplique a largura pelo comprimento do ambiente para descobrir a área em m². Depois, considere a medida da peça, o rendimento por caixa e uma margem de perda para cortes e paginação.
+        </div>
 
         <div class="hero-actions">
           <a class="btn btn-primary" href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Abrir calculadora de piso</a>
           <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share">Baixar app Mestre Piso</a>
         </div>
-
-        <div class="stats">
-          <div class="stat">
-            <strong>+ controle</strong>
-            <span>na compra do material</span>
-          </div>
-          <div class="stat">
-            <strong>- erro</strong>
-            <span>na estimativa da obra</span>
-          </div>
-          <div class="stat">
-            <strong>+ economia</strong>
-            <span>com menos desperdício</span>
-          </div>
-        </div>
       </div>
 
-      <div class="hero-box">
-        <h3>Você vai aprender aqui</h3>
-        <ul>
-          <li>Como calcular a área do ambiente</li>
-          <li>Como estimar peças e caixas</li>
-          <li>Como considerar perdas</li>
-          <li>Erros comuns na compra do piso</li>
-          <li>Quando usar uma calculadora profissional</li>
-        </ul>
+      <div class="hero-visual">
+        <img src="./assets/app-mestre-piso.png" alt="Aplicativo Mestre Piso exibido no celular" />
+        <div class="hero-caption">
+          <h3>Calcule com mais precisão na obra</h3>
+          <p>
+            O Mestre Piso ajuda você a visualizar melhor o cálculo, reduzir erros na compra e trabalhar com mais segurança no planejamento.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="benefit-strip">
+    <div class="wrap benefit-grid">
+      <div class="benefit-card">
+        <strong>Calcule a área</strong>
+        <span>Saiba exatamente a metragem do ambiente.</span>
+      </div>
+      <div class="benefit-card">
+        <strong>Estime peças</strong>
+        <span>Entenda melhor quantas peças serão necessárias.</span>
+      </div>
+      <div class="benefit-card">
+        <strong>Confira caixas</strong>
+        <span>Evite erro na compra e no fechamento do pedido.</span>
+      </div>
+      <div class="benefit-card">
+        <strong>Reduza perdas</strong>
+        <span>Planeje recortes, paginação e sobra de segurança.</span>
       </div>
     </div>
   </section>
@@ -548,16 +808,56 @@
   <main>
     <div class="wrap content">
       <div>
+
+        <section class="card">
+          <h2>Passo a passo para calcular piso por metro quadrado</h2>
+          <p>
+            Antes de comprar qualquer caixa de piso, vale seguir uma sequência simples. Isso evita estimativas fracas e melhora a tomada de decisão na obra.
+          </p>
+
+          <div class="steps">
+            <div class="step">
+              <div class="num">1</div>
+              <strong>Meça o ambiente</strong>
+              <p>Descubra largura e comprimento com atenção para não errar a área total.</p>
+            </div>
+            <div class="step">
+              <div class="num">2</div>
+              <strong>Confira a peça</strong>
+              <p>Veja o tamanho do piso escolhido para entender o rendimento real por peça.</p>
+            </div>
+            <div class="step">
+              <div class="num">3</div>
+              <strong>Considere perdas</strong>
+              <p>Inclua margem para cortes, paginação, quebras e ajustes na execução.</p>
+            </div>
+          </div>
+
+          <img src="./assets/calcular-piso-obra.png" alt="Planejamento de compra de piso para obra" class="content-image" />
+        </section>
+
         <section class="card">
           <h2>O primeiro passo: medir corretamente o ambiente</h2>
           <p>
             Antes de pensar em quantidade de peças, você precisa medir com precisão a largura e o comprimento do local. A conta básica da área é simples:
           </p>
+
           <div class="highlight">
             Área do ambiente = largura x comprimento
           </div>
+
+          <img src="./assets/calculo-area-piso.png" alt="Cálculo de área em metro quadrado para piso" class="content-image" />
+
           <p>
             Se um cômodo tem 3 metros de largura e 5 metros de comprimento, a área será de 15 m². Esse é o ponto de partida para calcular o piso, mas não deve ser o único dado considerado.
+          </p>
+
+          <div class="highlight-green">
+            <strong>Dica prática:</strong> quem mede errado no começo quase sempre compra errado no final. A precisão na medição é o que sustenta todo o restante do cálculo.
+          </div>
+
+          <p>
+            Para agilizar esse processo, você também pode usar nossa <a href="https://www.mestrepiso.com.br/calculadora-de-piso.html"><strong>calculadora de piso online</strong></a> e descobrir com mais clareza quanto comprar para sua obra.
           </p>
         </section>
 
@@ -572,6 +872,17 @@
           <p>
             Por isso, calcular apenas no seco pode dar uma falsa sensação de segurança. O ideal é incluir uma margem de perda.
           </p>
+
+          <div class="image-row">
+            <div class="image-card">
+              <img src="./assets/calcular-piso-obra.png" alt="Planejamento de compra de piso na obra" />
+              <span>Planejamento mais seguro antes da compra</span>
+            </div>
+            <div class="image-card">
+              <img src="./assets/app-mestre-piso.png" alt="Aplicativo Mestre Piso para calcular piso" />
+              <span>Aplicativo prático para calcular piso com mais agilidade</span>
+            </div>
+          </div>
         </section>
 
         <section class="card">
@@ -582,12 +893,25 @@
           <p>
             Se cada caixa cobre 2,5 m² e o ambiente tem 15 m², a conta inicial seria:
           </p>
+
           <div class="highlight">
             15 ÷ 2,5 = 6 caixas
           </div>
+
           <p>
             Mas a compra final pode precisar de uma ou mais caixas extras dependendo do padrão de assentamento, dos recortes e da margem de segurança adotada.
           </p>
+        </section>
+
+        <section class="cta-banner">
+          <h2>Quer fazer isso com mais rapidez?</h2>
+          <p>
+            Use a calculadora do Mestre Piso para sair da conta manual e ter uma visão mais prática da compra, do consumo e do planejamento.
+          </p>
+          <div class="section-cta">
+            <a class="btn btn-primary" href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Usar calculadora agora</a>
+            <a class="btn btn-secondary" href="https://play.google.com/store/apps/details?id=com.pinheiro.mestrepiso&pcampaignid=web_share">Baixar app</a>
+          </div>
         </section>
 
         <section class="card">
@@ -601,6 +925,9 @@
             <li>Ambientes com muitos recortes pedem mais atenção</li>
             <li>Obras com acabamento mais exigente precisam de melhor planejamento</li>
           </ul>
+
+          <img src="./assets/calcular-piso-obra.png" alt="Compra e planejamento correto de piso para evitar desperdício" class="content-image" />
+
           <p>
             É por isso que profissionais experientes evitam trabalhar apenas com a área bruta.
           </p>
@@ -616,6 +943,10 @@
             <li>Desconsiderar a paginação escolhida</li>
             <li>Não prever margem de segurança</li>
           </ul>
+
+          <div class="highlight-green">
+            <strong>Resumo:</strong> na prática, o erro não costuma estar só na conta. Ele normalmente aparece quando a compra é feita sem considerar execução, recorte e paginação.
+          </div>
         </section>
 
         <section class="card">
@@ -623,12 +954,16 @@
           <p>
             Quando você quer mais precisão, mais velocidade e uma apresentação melhor para o cliente, usar uma calculadora profissional faz toda a diferença. Em vez de depender apenas de contas manuais, você ganha uma visão mais prática da compra e do planejamento.
           </p>
+
+          <img src="./assets/app-mestre-piso.png" alt="Aplicativo Mestre Piso em destaque" class="content-image" />
+
           <p>
             Com o Mestre Piso, o profissional consegue estimar área, peças, caixas e ainda seguir para recursos mais avançados no app, como paginação e apresentação técnica.
           </p>
 
           <div class="section-cta">
             <a class="btn btn-primary" href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Usar calculadora agora</a>
+            <a class="btn btn-secondary" href="./aplicativo-para-calcular-piso.html">Ver app para calcular piso</a>
           </div>
         </section>
 
@@ -640,6 +975,20 @@
           <p>
             Quanto melhor o cálculo, menor a chance de desperdício e maior a confiança na obra. Para quem busca mais precisão e praticidade, uma calculadora específica pode ajudar bastante.
           </p>
+
+          <img src="./assets/app-mestre-piso.png" alt="Aplicativo Mestre Piso como solução prática para cálculo de piso" class="content-image" />
+        </section>
+
+        <section class="card">
+          <h2>Veja também</h2>
+          <div class="mini-list">
+            <a href="./calculadora-de-piso.html">Calculadora de piso online</a>
+            <a href="./paginacao-de-piso.html">Paginação de piso</a>
+            <a href="./piso-60x60-quantidade.html">Piso 60x60: quantos por m²?</a>
+            <a href="./calculadora-de-piso-diagonal.html">Calculadora de piso diagonal</a>
+            <a href="./quanto-de-argamassa-por-m2.html">Quanto de argamassa por m²</a>
+            <a href="./aplicativo-para-calcular-piso.html">Aplicativo para calcular piso</a>
+          </div>
         </section>
       </div>
 
@@ -651,10 +1000,24 @@
             <a href="./paginacao-de-piso.html">Paginação de piso</a>
             <a href="./piso-60x60-quantidade.html">Piso 60x60: quantos por m²?</a>
             <a href="./calculadora-de-piso-diagonal.html">Calculadora de piso diagonal</a>
+            <a href="./quanto-de-argamassa-por-m2.html">Quanto de argamassa por m²</a>
+            <a href="./aplicativo-para-calcular-piso.html">Aplicativo para calcular piso</a>
           </div>
+
+          <img src="./assets/app-mestre-piso.png" alt="Aplicativo Mestre Piso para cálculo profissional" class="sidebar-image" />
 
           <div class="tip-box">
             <strong>Dica:</strong> esta página ajuda a captar buscas de quem quer aprender a calcular piso e pode levar esse visitante para a sua calculadora principal.
+          </div>
+        </div>
+
+        <div class="sidebar-card">
+          <h3>Por que usar o Mestre Piso?</h3>
+          <img src="./assets/calcular-piso-obra.png" alt="Uso profissional do app Mestre Piso na obra" class="sidebar-image" />
+          <div class="mini-list">
+            <a href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Mais agilidade no cálculo</a>
+            <a href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Mais segurança na compra</a>
+            <a href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Menos desperdício na obra</a>
           </div>
         </div>
 
@@ -671,18 +1034,18 @@
 
   <footer>
     <div class="wrap footer-inner">
-      <img src="./assets/logo-mestre-piso-horizontal.png" alt="Logo Mestre Piso" class="footer-logo">
+      <img src="./assets/logo-mestre-piso-horizontal.png" alt="Logo Mestre Piso" class="footer-logo" />
       <div class="footer-title">Mestre Piso</div>
       <div>Calculadora de piso e paginação profissional para sua obra.</div>
 
       <div class="footer-links">
         <a href="./index.html">Início</a>
         <a href="https://www.mestrepiso.com.br/calculadora-de-piso.html">Calculadora</a>
+        <a href="./paginacao-de-piso.html">Paginação</a>
+        <a href="./aplicativo-para-calcular-piso.html">Aplicativo para calcular piso</a>
         <a href="./politica-de-privacidade.html">Política de Privacidade</a>
       </div>
     </div>
   </footer>
 </body>
 </html>
-
-
