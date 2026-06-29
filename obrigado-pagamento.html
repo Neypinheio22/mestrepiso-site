@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Pagamento Confirmado | Mestre Piso</title>
+<meta name="robots" content="noindex, nofollow" />
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Arial, sans-serif;
+    background: linear-gradient(180deg, #f7fbff 0%, #eef3f8 100%);
+    min-height: 100vh;
+    padding: 40px 20px;
+    color: #0F2A44;
+  }
+  .container {
+    max-width: 540px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px 28px;
+    box-shadow: 0 10px 40px rgba(15,42,68,0.12);
+  }
+  .header { text-align: center; margin-bottom: 28px; }
+  .check-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: #d1fae5;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
+    font-size: 44px;
+    color: #059669;
+  }
+  h1 { font-size: 26px; margin-bottom: 8px; }
+  .subtitle { color: #6b7280; font-size: 15px; }
+  .highlight-box {
+    background: #ecfdf5;
+    border-left: 4px solid #17a34a;
+    border-radius: 10px;
+    padding: 16px 18px;
+    margin-bottom: 24px;
+  }
+  .highlight-box p {
+    color: #064e3b;
+    font-weight: 500;
+    line-height: 1.5;
+    font-size: 15px;
+  }
+  .steps-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #374151;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+  }
+  .step {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    margin-bottom: 12px;
+  }
+  .step-num {
+    background: #0F2A44;
+    color: white;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 500;
+    font-size: 14px;
+    flex-shrink: 0;
+  }
+  .step-num.green { background: #17a34a; }
+  .step p { color: #374151; font-size: 14px; line-height: 1.5; }
+  .warning-box {
+    background: #fff8e6;
+    border: 1px solid #fbbf24;
+    border-radius: 10px;
+    padding: 14px 16px;
+    margin: 24px 0;
+  }
+  .warning-box p {
+    color: #78350f;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .footer {
+    text-align: center;
+    padding-top: 20px;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 24px;
+  }
+  .footer-label { color: #6b7280; font-size: 12px; margin-bottom: 8px; }
+  .footer-contact { color: #0F2A44; font-size: 13px; }
+</style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <div class="check-icon">✓</div>
+      <h1>Pagamento confirmado!</h1>
+      <p class="subtitle">Recebemos seu PIX. Tudo certo pra continuar.</p>
+    </div>
+
+    <div class="highlight-box">
+      <p>🎯 Volte agora para o aplicativo Mestre Piso. Seu cálculo será liberado automaticamente em até 30 segundos.</p>
+    </div>
+
+    <div>
+      <p class="steps-title">Como funciona agora</p>
+      <div class="step">
+        <div class="step-num">1</div>
+        <p>Volte ao app Mestre Piso no seu celular</p>
+      </div>
+      <div class="step">
+        <div class="step-num">2</div>
+        <p>Aguarde uns segundos — o app detecta o pagamento automaticamente</p>
+      </div>
+      <div class="step">
+        <div class="step-num green">3</div>
+        <p><strong>Pronto!</strong> Seu PDF é liberado + 24h pra ajustar o cálculo</p>
+      </div>
+    </div>
+
+    <div class="warning-box">
+      <p>⏱️ <strong>Demora mais que 1 minuto?</strong> Feche e abra o app novamente. Ele vai verificar e liberar.</p>
+    </div>
+
+    <div class="footer">
+      <p class="footer-label">Algum problema com seu pedido?</p>
+      <p class="footer-contact">💬 WhatsApp: <strong>(85) 99121-7227</strong></p>
+    </div>
+  </div>
+</body>
+</html>
